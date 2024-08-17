@@ -1,0 +1,12 @@
+/* Style for all paragraphs */
+p {
+    color: blue;          /* Sets the text color to blue */
+    font-size: 16px;      /* Sets the font size to 16 pixels */
+    line-height: 1.5;     /* Sets the line height to 1.5 times the font size */
+}
+
+/* Style for all h1 elements */
+h1 {
+    color: green;         /* Sets the text color to green */
+    text-align: center;   /* Centers the text */
+}

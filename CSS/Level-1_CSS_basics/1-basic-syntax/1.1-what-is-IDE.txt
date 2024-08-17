@@ -1,0 +1,34 @@
+▣ What is IDE?
+--------------
+An IDE (Integrated Development Environment) provides:
+
+ ⎔ Code Editor: A text editor with features like syntax highlighting.
+ 
+ ⎔ Debugger: Tools for finding and fixing errors in code.
+ 
+ ⎔ Compiler/Interpreter: Converts code into executable programs or interprets it.
+ 
+ ⎔ Build Automation: Tools to automate the build process.
+ 
+ ⎔ Version Control Integration: Integration with version control systems like Git.
+ 
+ ⎔ Code Refactoring: Tools for improving code structure without changing its behavior.
+ 
+ ⎔ Project Management: Features to manage project files and dependencies.
+ 
+ ⎔ Testing Tools: Utilities for running and managing tests.
+ 
+ ⎔ User Interface Designer: Tools for designing graphical user interfaces.
+ 
+ ⎔ Code Completion: Suggestions and auto-completion of code.
+
+
+▣ Installation and setup
+-------------------------
+⎔ VS Code
+
+▣ VS Code Extensions [CSS]
+--------------------------
+⎔ Live server
+⎔ Prettier
+

@@ -1,0 +1,21 @@
+▣ CSS Syntax Structure
+
+ ⎔ Selector: Targets the HTML element(s) you want to style.
+ ⎔ Declaration Block: Contains one or more declarations enclosed in curly braces {}.
+ ⎔ Declaration: Each declaration consists of a property and a value, separated by a colon :, and each declaration ends with a semicolon ;.
+ ⎔ Property: The attribute you want to change (like font, color, etc.)
+ ⎔ Value: The specific style you want to apply to the property (like red, bold, etc.)
+
+ Syntax: 
+
+ selector {
+    property: value;
+    property2: value2;
+    /* More declarations */
+ }
+
+ Example:
+ h1 {
+    color: red;
+    font-size: 30px;
+ }

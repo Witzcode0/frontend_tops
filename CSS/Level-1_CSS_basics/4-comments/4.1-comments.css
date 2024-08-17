@@ -1,0 +1,56 @@
+Usage of CSS Comments:
+
+1. Adding Notes and Explanations:
+    Purpose: Used to add notes or explanations within CSS stylesheets.
+    Syntax: /* Comment here */
+
+2. Not Displayed on the Web Page:
+    Effect: Comments are not visible in the rendered web page and do not affect the display of content.
+
+3. Syntax:
+    /* Single-line comment */
+    /* Multi-line comment
+   starts here
+   ends here */
+
+4. Helpful for Code Organization:
+   Usage: Comments help to organize and structure CSS code, making it easier to understand and maintain.
+
+5. Temporary Code Disabling:
+    Purpose: Can be used to temporarily disable CSS rules or sections of code without deleting them.
+
+    Example:
+    /* .class-name {
+     color: red;
+    } */
+
+6. Documentation and Debugging:
+    Usage: Helpful for documenting styling rules, explaining complex styles, or noting TODOs and debugging information.
+
+    Example:
+    /*
+     * This CSS rule sets the font color to red for all text elements.
+     * TODO: Add hover effect for better user experience.
+     */
+    .text-element {
+     color: red;
+    }
+
+    /*
+     * This CSS rule sets the font size to 16 pixels for all text elements.
+     * Debugging: Font size is currently set to 14 pixels.
+     */
+    .text-element {
+     font-size: 16px;
+    }
+
+    /*
+     * This CSS rule sets the font weight to bold for all text elements.
+     * Debugging: Font weight is currently set to normal.
+     */
+    .text-element {
+     font-weight: bold;
+    }
+
+/* Note: Comments should be added to the relevant code blocks and should not be overused or misplaced. They should be used to explain the purpose and functionality of the code, not as a substitute for proper documentation. Also, comments should not be used to hide or disable code, as this can lead to confusion and make it harder to understand. Always ensure that comments are clear, concise, and easy to understand for other developers. */
+
