@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            /* 
+            Solid Background Color: 
+            
+            syntax:  background-color: color;
+            */
+            /* background-color: cadetblue;  */
+            /* 
+            Gradient Background: 
+
+            syntax:
+            background: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+            Direction (optional):
+
+            Specifies the direction of the gradient.
+
+            Can be an angle (e.g., 45deg) or a keyword (e.g., to right, to bottom, to top left).
+            
+            If omitted, the default direction is to bottom (top to bottom).
+
+            Color Stops:
+
+            Define the colors and their positions in the gradient.
+
+            At least two color stops are required.
+
+            Can include positions as percentages or lengths (e.g., red 0%, blue 100%).
+
+
+            
+            */
+            /* Simple Top to Bottom Gradient */
+            /* background: linear-gradient(red, blue); */
+
+            /* Left to Right Gradient */
+            /* background: linear-gradient(to right, red, blue); */
+
+            /* Diagonal Gradient with Angle */
+            /* background: linear-gradient(90deg, #97ce97, #010e01, #71ec71) */
+            
+            /* Multiple Color Stops */
+            /* background: linear-gradient(to bottom, red, yellow, green, blue); */
+
+            /* Specifying Color Stop Positions */
+            /* background: linear-gradient(to right, red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
+
+            /* Repeating Linear Gradient */
+            /* background: repeating-linear-gradient(45deg, red, red 10px, blue 10px, blue 20px); */
+
+            /* Combining with Other Background Properties */
+            /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)),
+              url('https://th.bing.com/th/id/OIP.cbJQGDMpSEiHkHvcy1E7HQHaHa?rs=1&pid=ImgDetMain') no-repeat center center;
+            background-size: cover; */
+
+
+            /* Browser Support */
+            /* background: -webkit-linear-gradient(to right, red, blue); - For Safari 5.1 to 6.0 
+            background: -moz-linear-gradient(to right, red, blue);     For Firefox 3.6 to 15 
+            background: -o-linear-gradient(to right, red, blue);       For Opera 11.1 to 12.0 
+            background: linear-gradient(to right, red, blue);          Standard syntax 
+             */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- attributeSelector -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Selects elements based on the presence or value of a specific attribute. */
+      input[type="text"] {
+        border: 1px solid #ccc;
+        color: blueviolet;
+      }
+
+      a[href^="https"] {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="username" id="username" />
+    <a href="https://www.google.com">Google</a>
+  </body>
+</html>

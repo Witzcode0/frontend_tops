@@ -1,0 +1,35 @@
+<!-- childSelector -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Selects elements that are direct children of a specified element. */
+      .container > p {
+        color: blue;
+      }
+
+      ul > li {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>This is a paragraph.</p>
+      <p>This is another paragraph.</p>
+    </div>
+    <p>This is a paragraph outside the container.</p>
+    <p class="container">
+      This is a paragraph inside the container, but not a direct child.
+    </p>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </body>
+</html>

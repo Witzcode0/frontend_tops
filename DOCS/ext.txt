@@ -1,0 +1,6 @@
+Live Server
+Auto Close Tag
+Auto Complete Tag
+HTML Class Suggestions
+IntelliSense for CSS class names in HTML
+Live Preview

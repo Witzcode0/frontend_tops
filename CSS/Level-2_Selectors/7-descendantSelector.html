@@ -1,0 +1,25 @@
+<!-- descendantSelector -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selects all <p> elements that are direct children of <div> */
+        div > p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+        <p>This is a third paragraph.</p>
+    </div>
+
+    <p>This paragraph is not affected by the CSS rule.</p>
+    
+</body>
+</html>
