@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        The clip property in CSS is used to define a visible portion of an element. It essentially "clips" the element to the specified rectangle, hiding everything outside of this rectangle. This property is often used with positioned elements, particularly when working with images or other visual content.
+
+        syntax: 
+        clip: rect(top, right, bottom, left);
+
+        rect(top, right, bottom, left): Defines a rectangle to clip the element. The parameters specify the distances from the respective edges of the element.
+
+        - top: Distance from the top edge.
+        - right: Distance from the right edge.
+        - bottom: Distance from the bottom edge.
+        - left: Distance from the left edge.
+
+        Important Note:
+
+        The clip property has been deprecated in favor of the clip-path property, which offers more flexibility (e.g., using shapes other than rectangles).
+
+        */
+        img {
+            position: absolute;
+            clip: rect(0px, 500px, 400px, 0px);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://cdn.create.vista.com/api/media/small/471006078/stock-photo-cheerful-woman-photographer-with-camera-on-nature-landscape-lifestyle" alt=""> 
+</body>
+
+</html>
