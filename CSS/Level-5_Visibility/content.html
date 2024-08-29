@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            Syntax:
+            content: value;
+
+            Values:
+
+            Text: Any string of text enclosed in quotes, e.g., content: "Hello";.
+
+            URL: A link to an image or other media, e.g., content: url(image.png);.
+
+            Open/close quotes: open-quote or close-quote to automatically insert quotation marks.
+
+            Counters: Can be used with the counter() function for list item numbers, etc.
+        */
+
+        /* Adding quotes before and after blockquotes */
+        blockquote::before {
+            content: open-quote;
+        }
+
+        blockquote::after {
+            content: close-quote;
+        }
+
+        h1::before {
+            content: "★ ";
+            /* Adds a star before every h1 element */
+            color: gold;
+        }
+
+        h1::after {
+            content: " ✨";
+            /* Adds sparkles after every h1 element */
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>content property</h1>
+    <hr>
+    <blockquote>The content property in CSS is used in conjunction with the ::before and ::after pseudo-elements to
+        insert content into a web page. It allows you to add text, images, or other content before or after the content
+        of an element.</blockquote>
+</body>
+
+</html>

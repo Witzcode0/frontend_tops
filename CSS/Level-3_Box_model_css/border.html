@@ -5,41 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box {
-    border-width: 2px 4px 6px 8px;  /* Top: 2px, Right: 4px, Bottom: 6px, Left: 8px */
-    border-style: solid dashed dotted double;  /* Top: solid, Right: dashed, Bottom: dotted, Left: double */
-    border-color: #e5902f #333 #f00 #0f0;  /* Top: #e5902f, Right: #333, Bottom: #f00, Left: #0f0 */
-}
+        pre{
+            white-space:pre-wrap;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
 
+            /*
+                Syntax:
+                border: width style color;
+
+                Components of the border property:
+
+                Width: Specifies the thickness of the border. It can be a specific length (e.g., 2px, 0.5em) or keywords like thin, medium, thick.
+
+                Style: Defines the style of the border. Common values include:
+
+                none: No border.
+                solid: A solid line.
+                dashed: A dashed line.
+                dotted: A dotted line.
+                double: Two solid lines.
+                groove: A 3D grooved border.
+                ridge: A 3D ridged border.
+                inset: A 3D inset border.
+                outset: A 3D outset border.
+
+                Color: Specifies the color of the border. It can be a color name (e.g., black), a HEX value (e.g., #000000), an RGB value (e.g., rgb(0, 0, 0)), or an RGBA value (e.g., rgba(0, 0, 0, 0.5)).
+
+                Individual Border Sides:
+
+                You can also set borders for each side of an element individually using:
+
+                border-top
+                border-right
+                border-bottom
+                border-left
+
+
+                border-width:
+
+                Specifies the width of the border. You can set different widths for each side.
+
+                Example:border-width: top, right, bottom, left;
+
+                border-style:
+
+                Specifies the style of the border (solid, dashed, dotted, etc.).
+
+                Example:border-style:top, right, bottom, left;
+
+                border-color:
+                
+                Specifies the color of the border. You can set different colors for each side.
+
+                Example: border-color:top, right, bottom, left;
+
+                border-radius:
+
+                Rounds the corners of the border. You can set different radius values for each corner.
+
+                Examples:
+                border-radius: 10px; - all corners 
+                border-radius: 10px 20px 30px 40px; -  top-left, top-right, bottom-right, bottom-left 
+
+                border-image:
+
+                Allows you to use an image as the border.
+
+                Example: 
+                border: 10px solid transparent;
+                border-image: url(border-image.png) 30 round;
+
+                border-collapse (for tables):
+
+                - Controls whether the borders of adjacent table cells share a border or are separated.
+                - Values:
+                - `collapse`: Adjacent borders are collapsed into a single border.
+                - `separate`: Borders are separated.
+                - Example:
+                ```css
+                table {
+                    border-collapse: collapse;
+                }
+                ```
+
+                border-spacing (for tables):
+
+                - Specifies the space between the borders of adjacent table cells when `border-collapse` is set to `separate`.
+                - Example:
+                ```css
+                table {
+                    border-spacing: 10px;
+                }
+                ```
+
+                box-shadow (related but not a border property): 
+
+                - Adds a shadow around the border of an element.
+                - Example:
+                ```css
+                div {
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                }
+                ```
+
+
+
+            */
+
+            /* border: 2px solid black; */
+            /* border: thick double red; */
+
+            /* border-top: 2px solid red;
+            border-right: 4px dashed blue;
+            border-bottom: 2px solid green;
+            border-left: 4px dashed yellow; */
+
+            /* border-top-width: 2px;
+            border-right-width: 4px;
+            border-bottom-width: 6px;
+            border-left-width: 8px;
+            border-top-style: solid;
+            border-right-style: dashed;
+            border-bottom-style: dotted;
+            border-left-style: double;
+            border-top-color: red;
+            border-right-color: green;
+            border-bottom-color: blue;
+            border-left-color: yellow; */
+
+            /* border: 10px solid transparent;
+                border-image: url(https://img.freepik.com/free-photo/pink-nature-landscape-with-vegetation-flora_23-2150859535.jpg) 30 round; */
+
+        }
     </style>
 </head>
 <body>
-    <!-- 
-    the border property can also be set using shorthand syntax to define the style, width, and color of an element's border. Here's how you can use the shorthand syntax for borders:
-
-    Border Shorthand Syntax :
-
-    Single Value: You can set all sides of the border with a single shorthand declaration that includes border width, style, and color.
-
-    Example: border: 1px solid red;
-
-    Border Side-specific Syntax:
-
-    You can also specify borders for individual sides (top, right, bottom, left) using specific properties:
-
-    Two Values: You can set the top and bottom borders with a single shorthand declaration, and the left and right borders with another shorthand declaration.
-
-    Example: border-top: 1px solid red; border-bottom: 2px solid blue; border-left: 3px dashed green; border-right: 4px dotted yellow;
-
-    Border Shorthand with Multiple Values :
-    You can specify different widths, styles, or colors for each side by listing them in the order: top, right, bottom, left.
-
-    Example: 
-    border: 1px solid red; 
-    border-width: 2px 3px 4px 5px; 
-    border-style: dotted dashed dotted dotted; 
-    border-color: green blue yellow red;
-    -->
-    <div class="box"></div>
+    <pre>
+The border property in CSS is used to define the border around an HTML element. It is a shorthand property that allows you to set the width, style, and color of an element's border in one line.
+    </pre>
 </body>
 </html>

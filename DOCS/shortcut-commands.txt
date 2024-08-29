@@ -1,0 +1,119 @@
+Emmet Features
+    - $ and $$: Placeholders for incrementing numbers in class names.
+    - *num: Repeats a pattern num times.
+    - >: Indicates child elements.
+    - +: Indicates sibling elements.
+    - ^: Moves the cursor to the previous sibling.
+    - {}: Inserts text content.
+    - (): Groups elements, optionally with multiplication.
+    - |: Adds nested elements.
+    - #id and .class: Assigns IDs and classes.
+    - [attribute=value]: Adds attributes to elements.
+    - @attribute: Adds dynamic or custom attributes.
+
+element_name#id_name.class_name*num
+    - element_name: Specifies the HTML element type you want to create (e.g., div, span, p).
+
+    - #id_name: Creates an ID for the element. If you use $ after id_name, it will increment the ID number with each iteration (e.g., box1, box2, box3).
+
+    - .class_name: Adds a class to the element. If you use $ after .class_name, it will increment the class number with each iteration (e.g., box1, box2, box3).
+
+    - *num: Repeats the entire pattern three times.
+
+    Example :div#box$class*3
+    <div id="box1" class="box1"></div>
+    <div id="box2" class="box2"></div>
+    <div id="box3" class="box3"></div>
+
+
+
+.class_name$*num:
+    - .class_name$: creates a series of classes where $ is a placeholder for incrementing numbers.
+    - *num: repeats the pattern three times.
+
+    Example: .box$*3
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+# ---------------
+# Nested Elements
+# ---------------
+
+.class_name$*num>.class_name$$*num:
+
+    .class_name$*num:
+
+        - .class_name$: This part of the syntax creates a series of parent elements with the base class name class_name and appends an incrementing number to each class name. The $ is a placeholder for the incrementing number.
+
+        - *num: Repeats this pattern num times, so you'll get num parent elements with incremented class names.
+    >:
+
+        - The greater-than symbol specifies that the following pattern (.class_name$$*num) should be used as child elements inside each of the parent elements created by the first part.
+
+    .class_name$$*num:
+
+        - .class_name$$: Creates child elements with the base class name class_name and appends two levels of incrementing numbers. The $$ is a placeholder for these incrementing numbers, which will vary for each parent element.
+
+        - *num: Repeats this pattern num times, so each parent element will have num child elements with incremented class names.
+
+    Example : .box$*2>.box$$*3
+    <div class="box1">
+        <div class="box11"></div>
+        <div class="box12"></div>
+        <div class="box13"></div>
+    </div>
+    <div class="box2">
+        <div class="box21"></div>
+        <div class="box22"></div>
+        <div class="box23"></div>
+    </div>
+
+# --------------------------
+# Additional Emmet Shortcuts
+# --------------------------
+Example : div.container>h1{Header}^p{Paragraph}*2
+<div class="container">
+  <h1>Header</h1>
+  <p>Paragraph</p>
+  <p>Paragraph</p>
+</div>
+
+Example : form>input[type=text]+input[type=password]+button
+<form>
+  <input type="text">
+  <input type="password">
+  <button></button>
+</form>
+
+Example : div>p*2{Paragraph $}^a{Link}
+<div>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <a>Link</a>
+</div>
+
+Example : ul>(li*3)
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+Example : ul>li*3|p
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <p></p>
+</ul>
+
+Example : a[href=http://example.com]@target="_blank"
+<a href="http://example.com" target="_blank"></a>
+
+Example : input[type=text][name=username][placeholder=Enter Username]
+<input type="text" name="username" placeholder="Enter Username">
+
+Example : button.btn.primary[type=submit]
+<button class="btn primary" type="submit"></button>
+
