@@ -5,46 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        /* 
-        
-        CSS provides various ways to define and work with colors, allowing you to customize the look and feel of your web pages. Here's an overview of the different color systems available in CSS:
-
-        1. Hexadecimal Colors
-
-        Hexadecimal (hex) colors are one of the most common ways to specify colors in CSS. They are represented by a # followed by three or six hexadecimal digits.
-
-        Three-digit hex: #RGB
-        Six-digit hex: #RRGGBB
-
-        2. RGB and RGBA Colors
-
-        RGB stands for Red, Green, Blue. Colors are specified by three integers (0-255) representing the intensity of each color.
-
-        RGB format: rgb(red, green, blue)
-
-        RGBA format: rgba(red, green, blue, alpha) where alpha represents the opacity (0 is fully transparent, 1 is fully opaque).
-
-
-        */
+        .main-box{
+            border: 1px solid black;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: row; /* horizontal alignment */
+            /* flex-direction: column; */ /* vertical alignment */
+            /* flex-wrap: wrap-reverse;  */
+            flex-flow:column wrap ;
+            justify-content:;
+            
+        }
         .box{
-            height: 200px;
-            width: 200px;
-            border: 5px solid rgb(211, 63, 63);
+            border: 1px solid #3a7235;
+            height: 100px;
+            width: 100px;
             text-align: center;
-
-            /* 1. Hexadecimal Colors */
-            /* background-color: #113436;  
-            color: #fff; */
-
-            background-color: rgb(229, 144, 47); color 
-            color: rgba(255, 255, 255, 0.8);
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        this is a content
+    <div class="main-box">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
     </div>
 </body>
 </html>

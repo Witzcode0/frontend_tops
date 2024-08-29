@@ -1,0 +1,11 @@
+Flexbox (Flexible Box Layout) is a CSS layout module that allows you to design complex layouts easily and efficiently. It is used to align and distribute space among items in a container, even when their size is unknown or dynamic. Flexbox makes it easier to design a responsive layout structure without using floats or positioning.
+
+Basic Concepts
+- Flex Container: The parent element that holds the flex items. It's made a flex container by setting display: flex; or display: inline-flex;.
+- Flex Items: The direct children of the flex container.
+
+Flex Container Properties:
+
+display:
+    - flex: Establishes a block-level flex container.
+    - inline-flex: Establishes an inline-level flex container.
