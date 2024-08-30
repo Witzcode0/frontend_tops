@@ -3,27 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navbar</title>
     <style>
-        .line-height {
-            /* line-height: 1; */
-            /* line-height: 150%; */
-            /* line-height: 1.2; */
-            /* line-height: 2; */
-            /* line-height: 1.5em; */
-            /* line-height: 1.5rem; */
-            /* line-height: 20px; */
-            /* line-height: 20vh; */
-            /* line-height: 20%; */
-            /* line-height: 20vmin; */
-            /* line-height: 20vw; */
-            /* line-height: 20ch; */
-            /* line-height: 20ex; */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            background-color: beige;
+            outline: 10px solid rgb(215, 104, 13);
+        }
+        nav{
+            width: 100%;
+        }
+        nav > ul{
+            display: flex;
+            justify-content: end;
+            padding-right: 20px;
+        }
+        nav > ul > li {
+            margin: 10px;
+            list-style-type: none;
+            align-items: center;
+            
+        }
+        nav > ul > li > a{
+            text-decoration: none;
+        }
+        nav > ul > li > a:hover{
+            text-decoration: none;
+            border-bottom: 2px double rgb(39, 119, 172);
+        }
+        .contact-btn{
+            padding: 5px;
+            background: linear-gradient(45deg, #c23f3b, #6dc2e3);
+            border-radius: 15px;
+        }
+        .contact-btn:hover{
+            border: 2px 2px #fff;
         }
     </style>
 </head>
 <body>
-    <h1 class="line-height
-    ">Lorem ipsum dolor sit amet <br>Lorem ipsum dolor sit amet. <br>Lorem ipsum dolor sit amet. <br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim fugit reiciendis culpa, dolorem aliquam ducimus reprehenderit iusto tempora, maiores libero, facere autem sed illum quo quae assumenda! Similique, mollitia corporis.</h1>
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/012/986/755/non_2x/abstract-circle-logo-icon-free-png.png" alt="" height="80px" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <a class="contact-btn">
+                    Connect with us
+                </a>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>

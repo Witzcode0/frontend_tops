@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+       CSS Lists
+
+       CSS provides properties to style list elements (<ul>, <ol>, <li>).
+
+        - list-style-type: Specifies the type of list item marker (e.g., disc, circle, square, decimal).
+        - list-style-position: Specifies whether the list marker should appear inside or outside the content flow.
+        - list-style-image: Replaces list item markers with an image.
+        - list-style: Shorthand for setting list-style-type, list-style-position, and list-style-image.
+       */
+
+        ul {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        ul.custom-list {
+            list-style-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjZizx-6SkSoVR9tvHtDQGXPcxU-fQTyUHg&s');
+            
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="custom-list">
+        <li>num 1</li>
+        <li>num 2</li>
+        <li>num 3</li>
+        <li>num 4</li>
+        <li>num 5</li>
+    </ul>
+
+</body>
+
+</html>

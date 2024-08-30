@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* 
+
+        CSS Text :
+
+        - color: Sets the color of the text.
+        - text-align: Aligns text left, right, center, or justify.
+        - text-decoration: Adds decoration to text (e.g., underline, overline, line-through).
+        - text-transform: Controls capitalization (e.g., uppercase, lowercase, capitalize).
+        - letter-spacing: Sets the space between characters.
+        - line-height: Sets the space between lines of text.
+        - text-indent: Indents the first line of text in a block.
+        - text-shadow: Adds shadow to text.
+       */
+
+       p{
+        color: cornflowerblue;
+        text-align: justify;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        line-height: 40px;
+        text-indent: 50px;
+        text-shadow: 1px 1px 2px #aaa; /* text-shadow: offset-x | offset-y | blur-radius | color.*/
+       }
+       #text-decoration{
+        text-decoration: overline;
+       }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum <span id="text-decoration">dolor</span>  sit amet consectetur adipisicing elit. In eaque quis dolores voluptates omnis labore non delectus rerum molestias quasi.</p>
+
+</body>
+
+</html>
