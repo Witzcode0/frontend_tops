@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --green: #008000;
+}
+
+header{
+    nav {
+        ul{
+            list-style-type: none;
+            background-color: var(--black);
+            color: var(--white);
+
+            li{
+                display: inline-block;
+                padding: 10px;
+                .dropdown{
+                    display: none;
+
+                    ul{
+                        li{
+                            .side-dropdown
+                            {
+                                display: none;
+                                white-space: nowrap;
+                            }
+                        }
+                        li:hover{
+                            color: var(--white);
+
+                            .side-dropdown{
+                                display: block;
+                                position: absolute;
+                                margin-left: 92%;
+                                margin-top: -28px;
+
+                                ul{
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                            
+                                ul{
+                                    li{
+                                        display: block;
+                                        border-radius: 10px;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+            li:hover{
+                background-color: var(--green);
+                border-radius: 10px;
+                color: var(--white);
+
+                .dropdown{
+                    display: block;
+                    position: absolute;
+                    margin-left: -10px;
+                    margin-top:10px;
+                
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                    }
+                
+                    ul{
+                        li{
+                            display: block;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
