@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform and transition</title>
+    <style>
+        .container{
+            height: 50vh;
+            border: 1px solid black;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px double blue;
+            /* transform: rotateX(90deg); */
+            /* transform: rotateY(30deg); */
+            /* transform: translate(45px, 45px); */
+            /* transform: scaleX(1.5); */
+            /* transform: scaleY(2); */
+            /* transform: rotate(45deg); */
+            /* transform: skewX(20deg); */
+            /* transform: skew(20deg, 10deg); */
+            /* transform: matrix(1, 0.5, -0.5, 1, 100, 50); */
+            /* transform: matrix(1, 0, 0, 1, 100, 50); */
+            transform: translate(50px, 100px) rotate(45deg) scale(1.5) skew(10deg, 20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The transform property in CSS is a powerful tool for applying transformations to elements. It allows you to rotate, scale, skew, and translate elements on the 2D or 3D plane. Here’s a detailed overview of how to use the transform property:
+
+        syntax:
+        element {
+            transform: transform-function;
+        }
+
+        Common Transform Functions:
+            1] translateX(value) and translateY(value)
+                - Moves the element along the X or Y axis.
+                - Example: transform: translateX(50px);
+
+            2] translate(valueX, valueY)
+                - Moves the element along both X and Y axes.
+                - Example: transform: translate(50px, 100px);
+
+            3] scaleX(value) and scaleY(value)
+                - Scales the element along the X or Y axis.
+                - Example: transform: scaleX(1.5);
+
+            4] scale(valueX, valueY)
+                - Scales the element along both X and Y axes.
+                - Example: transform: scale(1.5, 2);
+
+            5] rotate(value)
+                - Rotates the element around its center.
+                - Example: transform: rotate(45deg);
+
+            6] skewX(value) and skewY(value)
+                - Skews the element along the X or Y axis.
+                - Example: transform: skewX(20deg);
+
+            7] skew(valueX, valueY)
+                - Skews the element along both X and Y axes.
+                - Example: transform: skew(20deg, 10deg);
+
+            8] matrix(a, b, c, d, e, f)
+                - Applies a 2D transformation matrix. This function allows for more complex transformations.
+                
+                - Here’s a brief explanation of each parameter:
+
+                a: The scaling factor in the x-direction.
+                b: The skewing factor in the y-direction.
+                c: The skewing factor in the x-direction.
+                d: The scaling factor in the y-direction.
+                e: The translation in the x-direction.
+                f: The translation in the y-direction.
+
+                - Example: transform: matrix(1, 0, 0, 1, 100, 50);
+
+                In this example:
+                1 for a and d means no scaling (default scale).
+                0 for b and c means no skewing.
+                100 for e moves the element 100 pixels to the right.
+                50 for f moves the element 50 pixels down.
+
+            9] Combining Transforms:
+                - You can combine multiple transform functions by separating them with spaces. The order of transformations is important, as they are applied in sequence.
+
+                - Here’s the syntax for combining multiple transforms:
+                transform: translate(x, y) rotate(angle) scale(x, y) skew(x-angle, y-angle);
+
+                - Example: transform: translate(50px, 100px) rotate(45deg) scale(1.5) skew(10deg, 20deg);
+
+                In this example:
+
+                translate(50px, 100px): Moves the element 50 pixels to the right and 100 pixels down.
+                rotate(45deg): Rotates the element 45 degrees clockwise.
+                scale(1.5): Scales the element to 1.5 times its original size.
+                skew(10deg, 20deg): Skews the element by 10 degrees along the x-axis and 20 degrees along the y-axis.
+
+
+    -->
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

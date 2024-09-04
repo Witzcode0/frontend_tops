@@ -1,0 +1,49 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --green: rgb(0, 255, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--black);
+  color: var(--white);
+  position: relative;
+}
+header nav {
+  position: relative;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px;
+  position: relative;
+}
+header nav ul li .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+header nav ul li .dropdown ul {
+  padding: 0;
+}
+header nav ul li .dropdown ul li {
+  display: block;
+}
+header nav ul li:hover .dropdown {
+  display: block;
+}/*# sourceMappingURL=styles.css.map */
