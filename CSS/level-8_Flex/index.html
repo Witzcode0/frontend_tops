@@ -64,7 +64,7 @@
             /* flex-direction: column-reverse; */
             /* flex flow property */
             /* flex-flow: column/row/row-reverse/column-reverse; */
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
 
             gap: 10px;
             /* row-gap: 20px;
@@ -96,7 +96,62 @@
         .box{
             border: 1px solid black;
             background-color:cornflowerblue;
-            width: 80px;
+            /* width: 80px; */
+        }
+
+        #box-1{
+            
+            /* 
+                the display: flex property is used to create a flexible box layout, allowing the child elements to be aligned and distributed within a container. The child elements (or flex items) of a flex container have several properties that control their behavior. These properties are:
+
+                1] flex-grow
+
+                - Definition: Defines the ability of a flex item to grow if necessary. It takes up available space in the flex container.
+                - Values: 0 (default, item will not grow) or a positive integer (e.g., 1, 2).
+
+                2] flex-shrink
+
+                - Definition: Defines the ability of a flex item to shrink if necessary. It takes up less space in the container if needed.
+                -Values: 1 (default, item will shrink) or 0 (item will not shrink) or other integers.
+
+                3] flex-basis
+
+                - Definition: Defines the default size of an element before any available space is distributed. It can be thought of as the initial size of the flex item.
+                - Values: Auto, a specific size (px, %, em, etc.), or 0.
+
+                4] flex
+
+                - Definition: A shorthand for flex-grow, flex-shrink, and flex-basis.
+                - Values: A combination of the above properties (e.g., flex: 1 1 200px).
+
+                5]  align-self
+
+                - Definition: Allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
+                - Values: auto (default), flex-start, flex-end, center, baseline, stretch.
+
+                6] order
+
+                - Definition: Controls the order in which the flex items appear in the flex container.
+                - Values: Integer values. The default is 0, and items with lower order values appear before those with higher ones.
+                                
+                7] margin (with auto)
+
+                - Definition: Using margin with auto can push a flex item to take up available space.
+
+
+            */
+
+
+            /* margin-left: auto; */
+            /* margin-top: auto; */
+            /* order:1 */
+            /* align-self: stretch; */
+            /* align-self: flex-start; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 2;
+            flex-basis: 200px;
+             */
+            /* flex: 1 1 200px; */
         }
     </style>
 </head>
