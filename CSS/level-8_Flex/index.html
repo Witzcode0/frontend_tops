@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        .container{
+
+            /* 
+            The flex parent property refers to properties used on a flex container in CSS to control the layout of its flex items. To create a flex container, you set the display property of the parent element to flex or inline-flex. The flex container properties allow for powerful control over the alignment, direction, spacing, and size of the child items.
+
+            Here are some key flex container properties:
+
+            1] display: flex: Defines the flex container.
+
+            2] flex-direction: Specifies the direction of the flex items in the container.
+                - row (default): Items are placed in a row, from left to right.
+                - row-reverse: Items are placed in a row, but from right to left.
+                - column: Items are placed in a column, from top to bottom.
+                - column-reverse: Items are placed in a column, but from bottom to top.
+
+            3] justify-content: Aligns flex items along the main axis (horizontal for row, vertical for column).
+                - flex-start: Items are aligned at the start of the container.
+                - flex-end: Items are aligned at the end of the container.
+                - center: Items are aligned in the center of the container.
+                - space-between: Items are spaced evenly, with the first item at the start and the last item at the end.
+                - space-around: Items are spaced evenly with equal space around them.
+
+            4] align-items: Aligns flex items along the cross axis (vertical for row, horizontal for column).
+
+                - stretch (default): Items stretch to fill the container.
+                - flex-start: Items align to the start of the cross axis.
+                - flex-end: Items align to the end of the cross axis.
+                - center: Items align to the center of the cross axis.
+                - baseline: Items align based on their text baseline.
+
+            5] align-content: Aligns flex lines (when there are multiple rows or columns) along the cross axis.
+
+                - stretch: Lines stretch to fill the container.
+                - flex-start: Lines align to the start of the container.
+                - flex-end: Lines align to the end of the container.
+                - center: Lines align to the center of the container.
+                - space-between: Lines are evenly spaced, with the first line at the start and the last at the end.
+                - space-around: Lines are evenly spaced with equal space around them.
+
+            6] flex-wrap: Determines whether flex items should wrap to the next line or column.
+                - nowrap (default): All items are placed in a single line.
+                - wrap: Items wrap onto multiple lines, from top to bottom (or left to right).
+                - wrap-reverse: Items wrap onto multiple lines, but in reverse order.
+
+            7] gap: Specifies the space between flex items (both row and column gaps).
+            */
+            border: 2px solid black;
+            height: 500px;
+            display: flex;
+            /* flex-direction property */
+            /* flex-direction: column; */
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* flex flow property */
+            /* flex-flow: column/row/row-reverse/column-reverse; */
+            flex-wrap: wrap;
+
+            gap: 10px;
+            /* row-gap: 20px;
+            column-gap: 20px; */
+
+            /* justify-content property */
+            /* justify-content: start;  */
+            /* justify-content: end;  */
+            justify-content: center; 
+            /* justify-content: space-between;  */
+            /* justify-content: space-around;  */
+            /* justify-content: space-evenly; */
+
+            /* align-items property */
+            /* align-items: start; */
+            /* align-items: end; */
+            align-items: center;
+            /* align-items: baseline; */
+            /* align-items: stretch; */
+
+            /* align-content:start;
+            align-content:end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+            align-content: space-evenly; */
+            
+        }
+        .box{
+            border: 1px solid black;
+            background-color:cornflowerblue;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+        <div class="box" id="box-7">box-7</div>
+        <div class="box" id="box-8">box-8</div>
+    </div>
+</body>
+</html>

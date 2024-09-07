@@ -1,0 +1,13 @@
+button{
+    background-color: #4caf50;
+    transition-property: background-color, color;
+    transition-duration: 1s;
+    color: white;
+    transition-timing-function: ease;
+}
+
+button:hover{
+    background-color: #45a049;
+    color: black;
+
+}
