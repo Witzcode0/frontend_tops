@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor</title>
+    <style>
+        .clickable{
+            /* 
+                The cursor property in CSS specifies the type of cursor that should be displayed when the user hovers over an element. It helps improve user experience by providing visual feedback based on the interaction.
+
+                example  : cursor: value;
+
+                Common cursor values:
+
+                1] default: The default cursor, usually an arrow.
+                    Example: cursor: default;
+
+                2] pointer: A hand-shaped cursor, indicating that the user can click or interact with the element.
+                    Example: cursor: pointer;
+
+                3] move: A text cursor indicating that the user can move the mouse over the element.
+                    Example: cursor: move;
+
+                4] not-allowed: A cursor indicating that the user cannot interact with the element.
+                    Example: cursor: not-allowed;
+
+                5] url(image.png): A custom cursor image.
+                    Example: cursor: url(cursor.png);
+
+                6] crosshair: A crosshair cursor indicating a crosshair.
+                    Example: cursor: crosshair;
+
+                7] text: A text cursor indicating that the user can type in the element.
+                    Example: cursor: text;
+
+                8] wait: A waiting cursor indicating that the user is waiting for a response.
+                    Example: cursor: wait;
+
+                9] help: A help cursor indicating that the user can find help with the element.
+                    Example: cursor: help;
+
+                10] progress: A progress cursor indicating that the user is processing the element.
+                    Example: cursor: progress;
+
+                11] e-resize: An e-resize cursor indicating that the user can resize the element horizontally.
+                    Example: cursor: e-resize;
+
+                12] nwse-resize: An nwse-resize cursor indicating that the user can resize the element in the northwest-southeast direction.
+                    Example: cursor: nwse-resize;
+
+                13) nesw-resize: An nesw-resize cursor indicating that the user can resize the element in the northeast-southwest direction.
+                    Example: cursor: nesw-resize;
+
+                14) col-resize: A col-resize cursor indicating that the user can resize the element vertically.
+                    Example: cursor: col-resize;
+
+                15) row-resize: A row-resize cursor indicating that the user can resize the element horizontally.
+                    Example: cursor: row-resize;
+
+                16) zoom-in: A zoom-in cursor indicating that the user can zoom in on the element.
+                    Example: cursor: zoom-in;
+
+                17) zoom-out: A zoom-out cursor indicating that the user can zoom out on the element.
+                    Example: cursor: zoom-out;
+
+                18) grab: A grabbing cursor indicating that the user can grab the element.
+                    Example: cursor: grab;
+
+                19) grabbing: A grabbing cursor indicating that the user is grabbing the element.
+                    Example: cursor: grabbing;
+
+                20) alias: An alias cursor indicating that the user can click or interact with the element.
+                    Example: cursor: alias;
+                
+                21) cell: A cell cursor indicating that the user can select a cell.
+
+                22) all-scroll: An all-scroll cursor indicating that the user can scroll the entire document.
+                    Example: cursor: all-scroll;
+
+                23) col-resize-horizontal: A col-resize-horizontal cursor indicating that the user can resize the element horizontally.
+                    Example: cursor: col-resize-horizontal;
+
+                24) col-resize-vertical: A col-resize-vertical cursor indicating that the user can resize the element vertically.
+                    Example: cursor: col-resize-vertical;
+
+                25) row-resize-horizontal: A row-resize-horizontal cursor indicating that the user can resize the element horizontally.
+                    Example: cursor: row-resize-horizontal;
+
+                26) row-resize-vertical: A row-resize-vertical cursor indicating that the user can resize the element vertically.
+                    Example: cursor: row-resize-vertical;
+
+                27) context-menu: A context-menu cursor indicating that the user can open a context menu.
+                    Example: cursor: context-menu;
+
+                28) progress-bar: A progress-bar cursor indicating that the user can see a progress bar.
+                    Example: cursor: progress-bar;
+
+                29) wait-pointer: A wait-pointer cursor indicating that the user is waiting for a response.
+                    Example: cursor: wait-pointer;
+
+                30) grab-pointer: A grab-pointer cursor indicating that the user can grab the element.
+                    Example: cursor: grab-pointer;
+
+                31) move-pointer: A move-pointer cursor indicating that the user can move the mouse over the element.
+                    Example: cursor: move-pointer;
+
+                32) text-pointer: A text-pointer cursor indicating that the user can type in the element.
+                    Example: cursor: text-pointer;
+
+                33) vertical-text: A vertical-text cursor indicating that the user can type vertically in the element.
+                    Example: cursor: vertical-text;
+
+                34) alias-pointer: An alias-pointer cursor indicating that the user can click or interact with the element.
+                    Example: cursor: alias-pointer;
+
+                35) copy: A copy cursor indicating that the user can copy the element.
+                    Example: cursor: copy;
+
+                36) no-drop: A no-drop cursor indicating that the user cannot drop the element.
+                    Example: cursor: no-drop;
+
+                37) not-allowed-drop: A not-allowed-drop cursor indicating that the user cannot drop the element.
+                    Example: cursor: not-allowed-drop;
+
+                38) all-scroll-horiz: An all-scroll-horiz cursor indicating that the user can scroll the entire document horizontally.
+                    Example: cursor: all-scroll-horiz;
+
+                39) col-resize-horiz-grab: A col-resize-horiz-grab cursor indicating that the user can resize the element horizontally.
+                    Example: cursor: col-resize-horiz-grab;
+
+                40) col-resize-horiz-grabbing: A col-resize-horiz-grabbing cursor indicating that the user is grabbing the element horizontally.
+                    Example: cursor: col-resize-horiz-grabbing;
+
+                41) col-resize-horiz-resize: A col-resize-horiz-resize cursor indicating that the user can resize the element horizontally.
+                    Example: cursor: col-resize-horiz-resize;
+
+                42) col-resize-horiz-text: A col-resize-horiz-text cursor indicating that the user can type horizontally in the element.
+                    Example: cursor: col-resize-horiz-text;
+
+                43) col-resize-horiz-vertical-resize: A col-resize-horiz-vertical-resize cursor indicating that the user can resize the element horizontally and vertically.
+                    Example: cursor: col-resize-horiz-vertical-resize;
+
+                44) col-resize-horiz-wait-pointer: A col-resize-horiz-wait-pointer cursor indicating that the user is waiting for a response horizontally.
+                    Example: cursor: col-resize-horiz-wait-pointer;
+
+                45) col-resize-horiz-grab-pointer: A col-resize-horiz-grab-pointer cursor indicating that the user can grab the element horizontally.
+                    Example: cursor: col-resize-horiz-grab-pointer;
+
+                46) col-resize-horiz-move-pointer: A col-resize-horiz-move-pointer cursor indicating that the user can move the mouse over the element horizontally.
+                    Example: cursor: col-resize-horiz-move-pointer;
+
+                47) col-resize-horiz-text-pointer: A col-resize-horiz-text-pointer cursor indicating that the user can type horizontally in the element.
+                    Example: cursor: col-resize-horiz-text-pointer;
+
+                48) col-resize-horiz-vertical-text: A col-resize-horiz-vertical-text cursor indicating that the user can type vertically horizontally in the element.
+                    Example: cursor: col-resize-horiz-vertical-text;
+
+                49) col-resize-horiz-alias-pointer: An col-resize-horiz-alias-pointer cursor indicating that the user can click or interact with the element horizontally.
+                    Example: cursor: col-resize-horiz-alias-pointer;
+
+                50) none: Hides the cursor.
+                    Example: cursor: none;
+
+            */
+            /* cursor: pointer; */
+        }
+    </style>
+</head>
+<body>
+    <button class="clickable">Click me</button>
+</body>
+</html>

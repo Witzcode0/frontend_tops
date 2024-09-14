@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter-increment</title>
+    <style>
+        body {
+            counter-reset: Topic; /* Initialize the counter */
+        }
+        h2::before {
+            /* Increment counter for each h2 */
+            content: "Topic " counter(Topic) ". "; /* Display the counter */
+        }
+
+        body {
+            counter-reset: Topic 11; /* Initialize counter to 10 */
+        }
+        h2::before {
+            counter-increment: Topic;
+
+            content: "Topic " counter(Topic) ". "; /* Display the counter starting from 10 */
+        }
+    </style>
+</head>
+<body>
+    <h2>Introduction</h2>
+    <h2>Overview</h2>
+    <h2>Conclusion</h2>
+</body>
+</html>

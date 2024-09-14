@@ -1,0 +1,41 @@
+HTML5 introduced new global attributes and enhanced some existing ones for better accessibility, form handling, and interactivity.
+
+1. autofocus
+Automatically focuses the input field when the page loads.
+<input type="text" autofocus>
+
+2. required
+Specifies that an input field must be filled out before submitting the form.
+<input type="text" required>
+
+3. placeholder
+Provides a short hint inside the input field that disappears when the user starts typing.
+<input type="text" placeholder="Enter your name">
+
+4. autocomplete
+Allows the browser to automatically fill in the form based on previous user input.
+<input type="email" autocomplete="on">
+
+5. formnovalidate
+Prevents form validation when submitting the form.
+<input type="submit" formnovalidate>
+
+6. multiple
+Allows the user to select multiple options in file inputs or <select> dropdowns.
+<input type="file" multiple>
+
+7. min and max
+Specifies the minimum and maximum value for number inputs or range inputs.
+<input type="number" min="1" max="100">
+
+8. step
+Defines the interval between legal numbers for number and range inputs.
+<input type="range" step="10" min="0" max="100">
+
+9. novalidate
+Used in <form> elements to disable form validation.
+<form novalidate>
+
+10. pattern
+Specifies a regular expression the input field’s value must match.
+<input type="text" pattern="[A-Za-z]{3}">

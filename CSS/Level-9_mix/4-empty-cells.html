@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border: 1px solid black;
+            height: 50px;
+            width: 100px;
+        }
+        .show-empty td {
+            empty-cells: show; /* Show borders on empty cells */
+        }
+        .hide-empty td {
+            empty-cells: hide; /* Hide borders on empty cells */
+        }
+    </style>
+</head>
+<body>
+    <h2>Show empty cells:</h2>
+    <table class="show-empty">
+        <tr>
+            <td>Cell 1</td>
+            <td></td> <!-- Empty cell -->
+        </tr>
+    </table>
+    
+    <h2>Hide empty cells:</h2>
+    <table class="hide-empty">
+        <tr>
+            <td>Cell 1</td>
+            <td></td> <!-- Empty cell -->
+        </tr>
+    </table>
+</body>
+</html>

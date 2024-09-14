@@ -1,0 +1,43 @@
+HTML5 introduced several new input types to make forms more user-friendly and to ensure better data validation.
+
+1. type="email"
+Validates that the input is a valid email format.
+<input type="email" name="email" required>
+
+2. type="url"
+Ensures the input is a valid URL.
+<input type="url" name="website">
+
+3. type="number"
+Allows numeric input with attributes like min, max, and step.
+<input type="number" name="age" min="1" max="100">
+
+4. type="tel"
+Allows input of a telephone number.
+<input type="tel" name="phone">
+
+5. type="date"
+Provides a date picker.
+<input type="date" name="birthday">
+
+6. type="time"
+Provides a time picker.
+<input type="time" name="time">
+
+7. type="range"
+Allows selection of a number using a slider.
+<input type="range" name="points" min="0" max="10">
+
+8. type="color"
+Opens a color picker for selecting a color.
+<input type="color" name="favcolor">
+
+9. type="search"
+Allows input for search queries.
+<input type="search" name="search">
+
+10. type="datetime-local"
+Allows selecting both date and time without a timezone.
+<input type="datetime-local" name="meeting-time">
+
+

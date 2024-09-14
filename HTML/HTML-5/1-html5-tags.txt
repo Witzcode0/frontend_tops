@@ -1,0 +1,63 @@
+HTML5 Tags
+HTML5 introduced several new tags to enhance semantic meaning and improve web page structure. Here are some of the most important HTML5 tags:
+
+1. Semantic Elements
+These elements provide better meaning to web page content and improve accessibility.
+
+<header>: Defines a header for a document or section.
+<footer>: Defines a footer for a document or section.
+<nav>: Defines a navigation section (usually for links).
+<article>: Represents a self-contained piece of content, such as a blog post or news article.
+<section>: Defines a section in a document, typically with its own heading.
+<aside>: Represents content that is tangentially related to the main content (like a sidebar).
+<main>: Represents the main content of the document.
+<figure>: Contains media like images or diagrams, often used with <figcaption> for captions.
+<figcaption>: Provides a caption for a <figure>.
+<mark>: Highlights or marks text for reference.
+<time>: Represents a specific time (e.g., a date, a time of day).
+
+2. Media Elements
+HTML5 added native support for multimedia elements:
+
+<audio>: Embeds audio content (supports MP3, Ogg, etc.).
+Example :
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<video>: Embeds video content (supports MP4, Ogg, etc.).
+Example: 
+<video controls width="500">
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video element.
+</video>
+
+<source>: Specifies multiple media resources for <audio> or <video>.
+
+<track>: Specifies text tracks for <video> or <audio> (e.g., subtitles, captions).
+
+3. Form Elements
+
+HTML5 introduced new form elements to improve user input collection.
+
+<datalist>: Provides an autocomplete feature for <input> elements.
+Example: 
+<input list="browsers">
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+</datalist>
+
+<output>: Displays the result of a calculation.
+Example: 
+<output name="result" for="a b">0</output>
+
+<progress>: Displays the progress of a task (like a download).
+Example: 
+<progress value="70" max="100"></progress>
+
+<meter>: Represents a scalar measurement within a known range (such as disk usage or battery level).
+Example:
+<meter value="2" min="0" max="10">2 out of 10</meter>
