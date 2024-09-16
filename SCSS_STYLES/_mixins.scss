@@ -1,0 +1,12 @@
+// @mixin mixin-name([para-list]) {
+  // CSS rules here
+// }
+
+// @include mixin-name([values]);
+
+@mixin font-style($font-family){
+    font-family: $font-family;
+    font-weight: 400;
+    font-style: normal;
+}
+

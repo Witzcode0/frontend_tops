@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Sofadi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Nanum+Gothic:wght@400;700;800&family=Sofadi+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebf6f5;
+}
+
+header nav {
+  height: 100px;
+  background-color: #fbe3e8;
+  font-size: 24px;
+  display: flex;
+  padding: 0px 30px;
+  align-items: center;
+}
+header nav .logo {
+  font-family: "Sofadi One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .left-side {
+  overflow-y: scroll;
+  border: 2px solid #fbe3e8;
+  height: 500px;
+  width: 80%;
+  padding: 10px;
+}
+.container .left-side h1 {
+  color: #5cbdb9;
+  font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.container .left-side p {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.container .left-side .squares {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  justify-content: center;
+}
+.container .left-side .squares .square {
+  border: 2px solid #5cbdb9;
+  height: 100px;
+}
+.container .left-side .squares .square-1, .container .left-side .squares .square-3, .container .left-side .squares .square-2 {
+  border-radius: 20px;
+  padding: 20px;
+}
+.container .right-side {
+  border: 2px solid #fbe3e8;
+  height: 500px;
+  width: 20%;
+  padding: 10px;
+}
+.container .right-side ul li {
+  list-style-type: none;
+  padding: 5px 10px;
+}/*# sourceMappingURL=style.css.map */

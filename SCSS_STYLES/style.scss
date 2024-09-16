@@ -1,0 +1,85 @@
+@import "variables";
+@import "mixins";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $Teeny-Greeny;
+}
+
+header{
+    nav{
+        height: 100px;
+        background-color: $Pinky;
+        font-size: 24px;
+        display: flex;
+        padding: 0px 30px;
+        align-items: center;
+
+        .logo{
+           @include font-style($header-font)
+        }
+    }
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    .left-side{
+        overflow-y: scroll;
+        border: $border-size solid $Pinky;
+        height: 500px;
+        width: 80%;
+        padding: 10px;
+
+        h1{
+            color: $Blue-Greeny;
+            @include font-style($sub-header-font);
+        }
+
+        p{
+            @include font-style($para-font);
+        }
+
+        .squares {
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            gap: 10px;
+            justify-content: center;
+            .square{
+                border: $border-size solid $Blue-Greeny;
+                height: 100px;
+            }
+
+            .square-1{
+                border-radius: 20px;
+                padding: 20px;
+            }
+            .square-2{
+                @extend.square-1;
+            }
+            .square-3{
+                @extend.square-1;
+            }
+        }
+    }
+    .right-side{
+        border: $border-size solid $Pinky;
+        height: 500px;
+        width: 20%;
+        padding: 10px;
+
+        ul{
+            li{
+                list-style-type: none;
+                padding: 5px 10px;
+            }
+        }
+
+    }
+}
