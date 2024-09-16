@@ -56,12 +56,18 @@ header{
                 height: 100px;
             }
 
+            %threeSquares{
+                background: linear-gradient(to right, $Pinky, $Blue-Greeny);
+            }
+
             .square-1{
                 border-radius: 20px;
                 padding: 20px;
+                
             }
             .square-2{
                 @extend.square-1;
+                @extend%threeSquares;
             }
             .square-3{
                 @extend.square-1;

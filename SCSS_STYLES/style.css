@@ -57,6 +57,9 @@ header nav .logo {
   border: 2px solid #5cbdb9;
   height: 100px;
 }
+.container .left-side .squares .square-2 {
+  background: linear-gradient(to right, #fbe3e8, #5cbdb9);
+}
 .container .left-side .squares .square-1, .container .left-side .squares .square-3, .container .left-side .squares .square-2 {
   border-radius: 20px;
   padding: 20px;
