@@ -1,0 +1,40 @@
+a) Hide and Show Elements
+.hide() and .show() are used to hide and show elements, respectively.
+
+$(document).ready(function() {
+    $("#hideButton").click(function() {
+        $("#myDiv").hide(); // Hides the element with id="myDiv"
+    });
+    $("#showButton").click(function() {
+        $("#myDiv").show(); // Shows the element
+    });
+});
+
+
+b) Slide Effect in jQuery
+jQuery provides methods to slide elements up and down:
+
+.slideUp(): Slides an element up (hides it).
+.slideDown(): Slides an element down (shows it).
+.slideToggle(): Toggles between sliding up and down.
+
+$(document).ready(function() {
+    $("#slideButton").click(function() {
+        $("#myDiv").slideToggle(); // Toggles sliding up/down
+    });
+});
+
+
+c) Fade Effect in jQuery
+jQuery also has fading effects:
+
+.fadeIn(): Fades in a hidden element.
+.fadeOut(): Fades out a visible element.
+.fadeToggle(): Toggles between fading in and fading out.
+.fadeTo(): Fades to a specified opacity.
+
+$(document).ready(function() {
+    $("#fadeButton").click(function() {
+        $("#myDiv").fadeToggle(); // Toggles fading in/out
+    });
+});

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide-show</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet recusandae dolore odio voluptates eius, harum odit magnam veniam fuga ab!</p>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+
+    <script>
+        $(document).ready(function(){
+            let show_btn = document.getElementById('showBtn');
+            let hide_btn = document.getElementById('hideBtn');
+            let mypara = document.getElementById('para');
+            show_btn.style.display = "none";
+            $("#hideBtn").click(function(){
+                $(this).hide();
+                show_btn.style.display = "block";
+                mypara.style.display = "none";
+                
+
+            });
+            $("#showBtn").click(function(){
+                $("hideBtn").show();
+                showBtn.style.display = "none";
+                mypara.style.display = "block";
+                hide_btn.style.display = "block";
+            });
+        });
+    </script> -->
+
+    <!-- <button id="btnU">Click Up</button>
+    <button id="btnD">Click Down</button>
+    <button id="btnT">Click Toggle</button>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ad animi veniam quibusdam cumque accusantium exercitationem, alias expedita natus suscipit vel tempora fugit voluptates temporibus enim modi! Maiores, praesentium ullam?</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnU").click(function(){
+                $("#para").slideUp("slow");
+
+            })
+        });
+        $(document).ready(function(){
+            $("#btnD").click(function(){
+                $("#para").slideDown("slow");
+            })
+        });
+        $(document).ready(function(){
+            $("#btnT").click(function(){
+                $("#para").slideToggle("slow");
+            })
+        });
+
+    </script> -->
+
+    <button id="fadIn">FadIN</button>
+    <button id="fadOut">FadOut</button>
+    <button id="fadTog">FadToggle</button>
+    <button id="fadTo">FadTo</button>
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores corrupti natus et sapiente! Deleniti molestias soluta iste, autem ex corporis perspiciatis? Fugiat saepe ratione at, blanditiis deleniti cupiditate ea id!</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#fadIn").click(function(){
+                $("#para").fadeIn("slow");
+            })
+            $("#fadOut").click(function(){
+                $("#para").fadeOut("fast");
+            })
+            $("#fadTog").click(function(){
+                $("#para").fadeToggle(3000);
+            })
+            $("#fadTo").click(function(){
+                $("#para").fadeTo(3000, .5, function(){
+                    let para = document.getElementById("para");
+                    para.style.color = "green";
+                });
+            })
+        })
+    </script>
+</body>
+</html>

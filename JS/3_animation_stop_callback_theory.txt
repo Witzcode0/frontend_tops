@@ -1,0 +1,46 @@
+1. jQuery Animation
+
+What it is: jQuery provides the .animate() function to create custom animations on elements by changing CSS properties over time.
+
+Syntax:
+$(selector).animate({css-properties}, speed, callback);
+
+css-properties: An object containing the CSS properties to be animated (e.g., left: '250px').
+speed: Duration of the animation (slow, fast, or a specific value in milliseconds).
+callback: A function to be executed after the animation completes.
+
+Example:
+$("#box").animate({
+  left: '250px',
+  height: '150px',
+  opacity: 0.5
+}, 1000);
+
+
+2. jQuery Stop
+What it is: The .stop() function is used to stop the currently running animations on an element.
+
+Syntax:
+$(selector).stop(clearQueue, jumpToEnd);
+
+clearQueue: A boolean (true or false). If true, it stops all animations queued on the element.
+jumpToEnd: A boolean. If true, the element jumps to the final CSS values (end of the animation).
+
+Example:
+$("#box").stop();
+3. jQuery Chaining
+What it is: jQuery chaining allows you to perform multiple actions on the same element in a single line.
+How it works: Most jQuery functions return the jQuery object, so you can call multiple methods in a sequence.
+
+Example:
+$("#box").css("background-color", "blue").slideUp(1000).slideDown(1000);
+
+4. jQuery Callback
+
+What it is: A callback is a function executed after the current effect or animation completes.
+Why use it: To ensure certain code runs only after an animation or action finishes.
+
+Example:
+$("#box").hide(1000, function() {
+  alert("The box is now hidden.");
+});

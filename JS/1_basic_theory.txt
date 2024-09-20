@@ -1,0 +1,85 @@
+jQuery Basics
+
+a) jQuery Introduction
+
+What is jQuery?
+jQuery is a fast, small, and feature-rich JavaScript library. It simplifies things like HTML document traversal and manipulation, event handling, animation, and Ajax with an easy-to-use API that works across a multitude of browsers.
+
+Why Use jQuery?
+
+Simplifies JavaScript: Makes JavaScript coding easier by offering pre-built methods.
+Cross-browser compatibility: jQuery ensures that code works across different browsers.
+Rich library: It provides a wide range of functions for DOM manipulation, event handling, animation, etc.
+
+
+b) jQuery Getting Started
+Include jQuery in Your Project
+There are two ways to include jQuery:
+
+Via CDN:
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+Download and Host Locally:
+Download the jQuery library from the official site: jQuery.com.
+Add it in your project folder and reference it:
+
+<script src="js/jquery-3.6.0.min.js"></script>
+Basic jQuery Setup:
+
+<script>
+  $(document).ready(function() {
+    // Your jQuery code here
+  });
+</script>
+
+
+c) jQuery Syntax
+jQuery syntax is based on the combination of CSS selectors and actions.
+
+Basic jQuery Syntax:
+
+$(selector).action();
+$(): The dollar sign is used to access jQuery.
+selector: Selects HTML elements.
+action(): Perform an action on the selected elements (e.g., .hide(), .show()).
+
+Example:
+$(document).ready(function() {
+  $("p").hide(); // Hides all <p> elements
+});
+
+
+
+d) jQuery Selectors
+jQuery selectors allow you to select and manipulate HTML elements.
+
+Common Selectors:
+
+Element Selector: Selects all elements with a given tag.
+
+$("p"); // Selects all <p> elements
+ID Selector: Selects a specific element by ID.
+$("#myID"); // Selects the element with ID="myID"
+Class Selector: Selects all elements with a given class.
+$(".myClass"); // Selects all elements with class="myClass"
+
+
+e) jQuery Events
+jQuery makes it easy to handle events like clicks, keypresses, mouse actions, etc.
+
+Common jQuery Events:
+
+click(): Runs a function when an element is clicked.
+$("#myButton").click(function() {
+  alert("Button clicked!");
+});
+
+mouseenter(): Triggers when the mouse pointer enters an element.
+$("#myDiv").mouseenter(function() {
+  $(this).css("background-color", "yellow");
+});
+
+keyup(): Fires when a key is released on the keyboard.
+$("#myInput").keyup(function() {
+  alert("Key released!");
+});
