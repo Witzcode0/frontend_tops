@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Slider with Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .slider-container {
+            width: 400px;
+            overflow: hidden;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .slider {
+            width: 1600px; /* 4 images * 400px each */
+            display: flex;
+        }
+
+        .slider img {
+            width: 400px;
+            height: 300px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <button class="prev">Prev</button>
+        <div class="slider">
+            <img src="https://via.placeholder.com/400x300/ff7f7f/333333?text=Image1" alt="Image 1">
+            <img src="https://via.placeholder.com/400x300/7f7fff/333333?text=Image2" alt="Image 2">
+            <img src="https://via.placeholder.com/400x300/7fff7f/333333?text=Image3" alt="Image 3">
+            <img src="https://via.placeholder.com/400x300/ffff7f/333333?text=Image4" alt="Image 4">
+        </div>
+        <button class="next">Next</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var currentIndex = 0;
+            var totalImages = $('.slider img').length;
+            var imageWidth = $('.slider img').width();
+
+            $('.next').click(function () {
+                if (currentIndex < totalImages - 1) {
+                    currentIndex++;
+                    $('.slider').animate({
+                        left: -currentIndex * imageWidth
+                    }, 500);
+                }
+            });
+
+            $('.prev').click(function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    $('.slider').animate({
+                        left: -currentIndex * imageWidth
+                    }, 500);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

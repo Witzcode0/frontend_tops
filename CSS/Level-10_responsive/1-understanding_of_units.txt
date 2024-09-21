@@ -1,0 +1,31 @@
+1. px (Pixels)
+Absolute unit: px is a fixed unit representing a single pixel on the screen. It's commonly used for precise, fixed-size elements like borders or images.
+Example: width: 200px; will always render as 200 pixels wide, regardless of screen size or resolution.
+
+2. % (Percentage)
+Relative unit: % represents a percentage relative to the size of the parent element. For width, it’s calculated based on the width of the parent; for height, based on the parent’s height.
+Example: width: 50%; means the element will take up 50% of the width of its parent container.
+
+3. vh (Viewport Height)
+Relative unit: vh is relative to the height of the browser's viewport. 1vh equals 1% of the viewport's height.
+Example: height: 100vh; will make an element fill the full height of the viewport.
+
+4. vw (Viewport Width)
+Relative unit: vw is relative to the width of the viewport. 1vw equals 1% of the viewport’s width.
+Example: width: 100vw; will make an element fill the full width of the viewport.
+
+5. vmin (Viewport Minimum)
+Relative unit: vmin takes the smaller value between vw and vh. This unit is useful for maintaining consistency in scaling elements on different screen orientations.
+Example: width: 50vmin; means the element’s width will be 50% of the smaller dimension (either viewport height or width).
+
+6. vmax (Viewport Maximum)
+Relative unit: vmax takes the larger value between vw and vh. It helps in responsive design by allowing elements to adjust based on the larger viewport dimension.
+Example: width: 50vmax; will set the width as 50% of the larger dimension (height or width).
+
+7. em
+Relative unit: em is relative to the font size of the element itself or its parent, depending on the context. For most elements, it is influenced by the inherited font size.
+Example: font-size: 2em; means the font size will be twice as large as the current font size of the element or its parent.
+
+8. rem (Root em)
+Relative unit: rem is relative to the root element's (<html>) font size. It ensures consistent sizing across elements regardless of nesting.
+Example: font-size: 1.5rem; will be 1.5 times the font size defined at the root (<html>) level.

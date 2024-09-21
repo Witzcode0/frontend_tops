@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .para{
+            letter-spacing: 2px;
+        }
+        .addWordSpace {
+            word-spacing: 5px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis harum deleniti cum alias dolores beatae necessitatibus placeat eius, deserunt quod numquam ratione quos sed omnis ut ea impedit. Error, quas?</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(".para").css({
+                    color:"green",
+                }).removeClass("para").addClass("addWordSpace").animate({
+                    left: "100px",
+                    opacity: .5,
+                    width:"50%"
+                });
+            });
+        })
+    </script>
+</body>
+</html>

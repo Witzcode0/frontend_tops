@@ -1,0 +1,5 @@
+1. Applying CSS Using jQuery
+You can use jQuery's .css() method to apply CSS styles dynamically to HTML elements. The .css() method can accept a single property-value pair or multiple property-value pairs in an object.
+
+syntax:
+$(selector).css(propertyName, value);
