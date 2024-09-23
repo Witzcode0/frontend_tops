@@ -1,135 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>Slider with Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .logo{
+
+        .main-container {
+            padding: 10px;
+            width: 100vw;
+        }
+
+        .container {
+            height: 50vh;
+            width: 100%;
+            background-color: rgb(202, 231, 225);
             display: flex;
+            gap: 10px;
             justify-content: center;
             align-items: center;
-            font-size: xx-large;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            color: chocolate;
+            overflow: hidden;
+            position: relative;
         }
 
-        header{
-            display: flex;
-            align-items: center;
-            background-color: beige;
-            outline: 5px solid rgb(215, 104, 13);
-            overflow: hidden; /* Ensures content does not overflow the header */
-        }
-        nav{
-            width: 100%;
-        }
-        nav > ul{
-            display: flex;
-            justify-content: end;
-            padding-right: 20px;
-        }
-        nav > ul > li {
-            margin: 10px;
-            list-style-type: none;
-            align-items: center;
-        }
-        nav > ul > li > a{
-            color: chocolate;
-            text-decoration: none;
-            cursor: pointer; /* Change cursor to pointer */
-        }
-        nav > ul > li > a:hover{
-            text-decoration: none;
-            border-bottom: 2px double rgb(39, 119, 172);
-        }
-        main{
-            background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHZpZXd8ZW58MHx8MHx8fDA%3D');
+        .item {
+            border: 1px solid black;
+            height: 80%;
+            width: 80%;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            position: absolute;
+            transition: transform 0.8s ease-in-out;
             background-size: cover;
             background-position: center;
-            overflow: hidden; 
+            opacity: 1;
         }
-        .hero{
-            text-align: center;
-            color: white;
-            padding: 100px;
+
+        .item.move-up {
+            transform: translateY(-100%);
+            opacity: 0;
         }
-        .hero > h1{
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 2px #666161;
+
+        .item.move-down {
+            transform: translateY(100%);
+            opacity: 0;
         }
-        .hero-btn{
+
+        .buttons {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #moveUpButton,
+        #moveDownButton {
             padding: 10px;
-            margin-top: 10px;
-            background: linear-gradient(45deg, #c23f3b, #6dc2e3);
-            border-radius: 5px;
-            color: azure;
-            cursor: pointer;
         }
-        .counter{
-            text-align: center;
-            padding: 100px;
-            background-color: beige;
-        }
-        .number{
-            color: cadetblue;
-            font-size: xx-large;
-        }
+
+        .placeholder-1 {
+    background-image: url('https://placehold.co/600x400/FF6347/FFFFFF/png'); /* Tomato */
+}
+
+.placeholder-2 {
+    background-image: url('https://placehold.co/600x400/4682B4/FFFFFF/png'); /* Steel Blue */
+}
+
+.placeholder-3 {
+    background-image: url('https://placehold.co/600x400/32CD32/FFFFFF/png'); /* Lime Green */
+}
+
+.placeholder-4 {
+    background-image: url('https://placehold.co/600x400/FFD700/FFFFFF/png'); /* Gold */
+}
+
+.placeholder-5 {
+    background-image: url('https://placehold.co/600x400/8A2BE2/FFFFFF/png'); /* Blue Violet */
+}
+
     </style>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="https://static.vecteezy.com/system/resources/previews/012/986/755/non_2x/abstract-circle-logo-icon-free-png.png" alt="" height="80px" > Logo
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="hero">
-            <!-- Your Content Here -->
-            <h1>Welcome to our Website</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus quis ex iaculis vulputate. Duis vel eros ac arcu vulputate mollis. Nulla facilisi. Nulla facilisi. Donec consectetur, dui id fermentum tristique, justo purus consectetur justo, id bibendum velit ipsum id velit.</p>
-            <button class="hero-btn">Connect with us</button>
-        </div>
 
-        <div class="counter">
-            <h1>Counter</h1>
-            <h1 class="number">0</h1>
-            <button onclick="counter()">Click</button>
-            <button onclick="reset()">Reset</button>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="item item-1 placeholder-1">box-1</div>
+            <div class="item item-2 placeholder-2">box-2</div>
+            <div class="item item-3 placeholder-3">box-3</div>
+            <div class="item item-4 placeholder-4">box-4</div>
+            <div class="item item-5 placeholder-5">box-5</div>
         </div>
-    </main>
+        <div class="buttons">
+            <button id="moveUpButton">Move Up</button>
+            <button id="moveDownButton">Move Down</button>
+        </div>
+    </div>
 
     <script>
-        function counter(){
-            var number = document.querySelector('.number');
-            var count = parseInt(number.textContent);
-            count++;
-            number.textContent = count;
-            if(count == 10){
-                clearInterval(interval);
-            }
-        }
-
-        function reset(){
-            var number = document.querySelector('.number');
-            number.textContent = 0;
-            clearInterval(interval);
-        }
+        $(document).ready(function () {
+            // Function to handle 'Move Up' button click
+            $('#moveUpButton').click(function () {
+                const firstItem = $('.container .item:first');
+                
+                firstItem.addClass('move-up');
+                
+                setTimeout(function () {
+                    firstItem.removeClass('move-up');
+                    firstItem.detach();
+                    $('.container').append(firstItem); 
+                    firstItem.css('transform', 'translateY(0)'); 
+                }, 800); 
+            });
+            $('#moveDownButton').click(function () {
+                const lastItem = $('.container .item:last');
+                
+                lastItem.addClass('move-down');
+                
+                setTimeout(function () {
+                    lastItem.removeClass('move-down');
+                    lastItem.detach(); 
+                    $('.container').prepend(lastItem); 
+                    lastItem.css('transform', 'translateY(0)'); 
+                }, 800);
+            });
+        });
     </script>
 </body>
+
 </html>

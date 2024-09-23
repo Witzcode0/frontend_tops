@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation, Stop, and callback</title>
+    <title>Animation, Stop, and Callback</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .para {
+            width: 100px; /* Initial width */
+            border: 1px solid black;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
-    
+    <button id="btn">Animation</button>
+    <button id="btnStop">Stop Animation</button>
+
+    <div class="para">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic praesentium alias ad quibusdam quia illo repellendus, non voluptas provident est voluptate totam sunt consectetur veniam cum nulla saepe veritatis.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(".para")
+                    .animate({ left: '100px', margin: "10px" }, 1000)  
+                    .animate({ padding: '10px' }, 1000) 
+                    .animate({ borderRadius: '10px' }, 1000) 
+                    .animate({ opacity: 0.5 }, 1000, function() {
+                        alert("Animation completed!");
+                    });
+            });
+
+            $('#btnStop').click(function(){
+                $(".para").stop(true, true);
+            });
+        });
+    </script>
 </body>
 </html>
