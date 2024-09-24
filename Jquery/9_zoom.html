@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website with Zoom Plugin</title>
+
+    <!-- Include jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include ElevateZoom Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #image-container {
+            margin-top: 20px;
+        }
+        img {
+            width: 300px;
+        }
+        button {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic Website with Image Zoom Feature</h2>
+
+    <!-- Button to Load New Image -->
+    <button id="load-image-btn">Load New Image</button>
+
+    <!-- Image Container with Zoom Feature -->
+    <div id="image-container">
+        <img id="zoom-image" src="https://via.placeholder.com/300" data-zoom-image="https://via.placeholder.com/1000" alt="Zoomable Image">
+    </div>
+
+    <!-- Optional: Container to show dynamic content (e.g., image description) -->
+    <div id="description-container">
+        <p id="image-description">Image Description will be updated here.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize the zoom plugin on the existing image
+            $("#zoom-image").elevateZoom();
+
+            // Load new image dynamically and reinitialize zoom
+            $("#load-image-btn").click(function() {
+                // Update image source
+                $("#zoom-image").attr("src", "https://via.placeholder.com/400");
+                $("#zoom-image").attr("data-zoom-image", "https://via.placeholder.com/1200");
+
+                // Reinitialize the zoom plugin with the new image
+                $('.zoomContainer').remove(); // Remove old zoom container
+                $("#zoom-image").elevateZoom();
+
+                // Update image description dynamically
+                $("#image-description").text("New image loaded with zoom functionality.");
+            });
+        });
+    </script>
+
+</body>
+</html>

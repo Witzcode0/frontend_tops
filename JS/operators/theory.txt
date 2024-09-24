@@ -1,0 +1,49 @@
+Operators are symbols or keywords used in JavaScript to perform operations on values. They allow you to combine values, compare them, modify them, and create expressions that evaluate to new values.
+
+Types of Operators
+
+JavaScript offers a wide range of operators, categorized into different types based on their functions:   
+
+1. Arithmetic Operators
+Addition: +
+Subtraction: -
+Multiplication: *
+Division: /
+Modulus: % (remainder after division)   
+Increment: ++ (adds 1 to the operand)   
+Decrement: -- (subtracts 1 from the operand)   
+
+2. Comparison Operators
+Equal: == (loose equality)   
+Not Equal: != (loose inequality)   
+Strictly Equal: === (strict equality, checks both value and type)   
+Strictly Not Equal: !== (strict inequality, checks both value and type)   
+Greater Than: >
+Less Than: <
+Greater Than or Equal To: >=
+Less Than or Equal To: <=
+
+3. Logical Operators
+Logical AND: && (returns true if both operands are true)
+Logical OR: || (returns true if at least one operand is true)   
+Logical NOT: ! (negates the value of the operand)   
+
+4. Assignment Operators
+Assignment: =
+Addition Assignment: +=
+Subtraction Assignment: -=
+Multiplication Assignment: *=
+Division Assignment: /=   
+Modulus Assignment: %=
+Bitwise AND Assignment: &=
+Bitwise OR Assignment: |=
+Bitwise XOR Assignment: ^=
+Left Shift Assignment: <<=
+Right Shift Assignment: >>=
+Unsigned Right Shift Assignment: >>>=   
+
+5. Conditional Operator (Ternary Operator)
+Conditional Operator: ? : (ternary operator)   
+
+6. Typeof Operator
+Typeof Operator: typeof (returns the data type of a value)   

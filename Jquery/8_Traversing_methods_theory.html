@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Traversing Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .active {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery Traversing Example</h2>
+    <div class="container">
+      <div class="parent">
+        <h3>Parent Element</h3>
+        <p class="descendant">Child Paragraph 1</p>
+        <p class="descendant">Child Paragraph 2</p>
+        <span>Other Child Element</span>
+      </div>
+      <div class="sibling">Sibling Element 1</div>
+      <div class="sibling active">Sibling Element 2</div>
+    </div>
+
+    <button id="parent-btn">Find Parent</button>
+    <button id="children-btn">Find Children</button>
+    <button id="siblings-btn">Find Siblings</button>
+    <button id="filter-btn">Filter Elements</button>
+
+    <h2>jQuery Load and No-Conflict Example</h2>
+
+    <button id="load-btn">Load Content from Server</button>
+
+    <div
+      id="content"
+      style="border: 1px solid #ccc; padding: 10px; margin-top: 20px"
+    >
+      Content will be loaded here.
+    </div>
+
+    <!-- No-Conflict Example Button -->
+    <button id="no-conflict-btn">Check No-Conflict</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#parent-btn").click(function () {
+          $(".descendant").first().parent().addClass("highlight");
+        });
+
+        $("#children-btn").click(function () {
+          $(".parent").children().addClass("highlight");
+        });
+
+        $("#siblings-btn").click(function () {
+          $(".active").siblings().addClass("highlight");
+        });
+
+        $("#filter-btn").click(function () {
+          $(".sibling").filter(".active").css("font-weight", "bold");
+        });
+
+        
+        var jq = jQuery.noConflict();
+
+        jq(document).ready(function () {
+          jq("#load-btn").click(function () {
+            jq("#content").load("sample.html");
+          });
+
+          jq("#no-conflict-btn").click(function () {
+            alert(
+              "No-Conflict mode in action. jQuery is using 'jq' instead of '$'."
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

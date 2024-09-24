@@ -1,0 +1,61 @@
+1) jQuery Traversing
+
+jQuery provides methods to traverse through the DOM (Document Object Model). Traversing refers to moving through the elements of the DOM to find or interact with specific elements.
+
+.parent(): Finds the direct parent of the selected element(s).
+.parents(): Finds all ancestors of the selected element(s), up to but not including the root.
+.children(): Finds the direct children of the selected element(s).
+.siblings(): Finds all sibling elements of the selected element(s).
+.filter(): Reduces the set of matched elements to those that match the selector or function.
+
+2) jQuery Ancestors
+Ancestors are elements that are above the current element in the DOM hierarchy.
+
+.parent(): This method returns the direct parent element.
+$("p").parent();
+
+.parents(): This method returns all ancestor elements (parents, grandparents, etc.).
+$("p").parents();
+
+.parentsUntil(): This method returns all ancestor elements up to, but not including, the specified element.
+$("p").parentsUntil("div");
+
+3) jQuery Descendants
+Descendants are elements nested inside the current element.
+
+.children(): This method returns all direct children of the selected element.
+$("div").children();
+
+.find(): This method returns all descendant elements that match the selector.
+$("div").find("span");
+
+4) jQuery Siblings
+Siblings are elements that share the same parent.
+
+.siblings(): This method finds all sibling elements.
+$("h2").siblings();
+
+.next(): Finds the next sibling element.
+$("h2").next();
+
+.prev(): Finds the previous sibling element.
+$("h2").prev();
+
+5) jQuery Filtering
+Filtering allows narrowing down the set of selected elements.
+
+.filter(): Reduces the matched set to elements that match the selector or pass a function.
+$("div").filter(".active");
+
+.not(): Removes elements that match the selector.
+$("div").not(".inactive");
+
+.is(): Checks if any elements match the selector.
+$("div").is(".highlight");
+
+
+6) jQuery Load
+The .load() method is used to load data from a server and place the returned HTML into the selected element.
+
+7) jQuery No-Conflict
+The noConflict() method is used to avoid conflicts with other libraries that might use the $ symbol. After calling this, jQuery will give up control of the $ variable, and you can assign it to another variable.
