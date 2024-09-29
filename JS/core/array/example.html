@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <h2>Your Items:</h2>
+    <ul id="cart"></ul>
+    <p>Total Price: <span id="totalPrice">0</span></p>
+    
+    <script>
+        // Shopping cart items (name and price)
+        const cartItems = [
+            { name: 'Apple', price: 1.5 },
+            { name: 'Banana', price: 0.8 },
+            { name: 'Cherry', price: 2.0 },
+        ];
+
+        // Function to display cart items
+        function displayCart(items) {
+            const cartElement = document.getElementById('cart');
+            cartElement.innerHTML = ''; // Clear previous items
+            let total = 0;
+
+            items.forEach(item => {
+                // Create a list item for each product
+                const li = document.createElement('li');
+                li.textContent = `${item.name}: $${item.price.toFixed(2)}`;
+                cartElement.appendChild(li);
+                total += item.price; // Calculate total price
+            });
+
+            // Update total price display
+            document.getElementById('totalPrice').textContent = total.toFixed(2);
+        }
+
+        // Spread Operator Example: Adding new items to the cart
+        const newItems = [
+            { name: 'Mango', price: 1.2 },
+            { name: 'Orange', price: 1.0 },
+        ];
+
+        // Combine existing cart items with new items
+        const updatedCartItems = [...cartItems, ...newItems];
+
+        // Display updated cart
+        displayCart(updatedCartItems);
+
+        // Rest Operator Example: Function to add multiple items
+        function addItemsToCart(...items) {
+            updatedCartItems.push(...items); // Add new items using the spread operator
+            displayCart(updatedCartItems); // Refresh cart display
+        }
+
+        // Destructuring Example: Add a new item to the cart
+        const newItem = { name: 'Grapes', price: 3.0 };
+        const { name, price } = newItem; // Destructure the new item
+        addItemsToCart({ name, price });
+
+        // Additional function to remove an item
+        function removeItem(itemName) {
+            const filteredItems = updatedCartItems.filter(item => item.name !== itemName);
+            updatedCartItems.length = 0; // Clear current items
+            updatedCartItems.push(...filteredItems); // Re-add filtered items
+            displayCart(updatedCartItems); // Refresh cart display
+        }
+
+        // Example of removing an item after 5 seconds
+        setTimeout(() => {
+            removeItem('Banana'); // Remove 'Banana' from the cart
+        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Practical</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #size {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="message">Welcome to JavaScript Events!</h1>
+    <p id="size">Current window size: </p>
+
+    <button id="clickButton">Click Me</button>
+    <button id="dblClickButton">Double Click Me</button>
+
+    <script>
+        // Selecting the message and size elements
+        const message = document.getElementById('message');
+        const size = document.getElementById('size');
+
+        // Function to update the size display
+        function updateWindowSize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            size.textContent = `Current window size: ${width} x ${height}`;
+        }
+
+        // Event listener for single click
+        document.getElementById('clickButton').addEventListener('click', () => {
+            message.textContent = "Button Clicked!";
+        });
+
+        // Event listener for double click
+        document.getElementById('dblClickButton').addEventListener('dblclick', () => {
+            message.textContent = "Button Double-Clicked!";
+        });
+
+        // Event listener for window resize
+        window.addEventListener('resize', () => {
+            message.textContent = "Window resized!";
+            updateWindowSize(); // Update the size display whenever the window is resized
+        });
+
+        // Initial call to display the current window size on load
+        window.addEventListener('load', () => {
+            message.textContent = "Page Loaded!";
+            updateWindowSize();
+        });
+
+    </script>
+</body>
+
+</html>
