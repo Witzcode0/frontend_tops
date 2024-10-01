@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout and clearTimeout Example</title>
+</head>
+
+<body>
+    <h1 id="message">Wait for it...</h1>
+    <button id="startButton">Start Timer</button>
+    <button id="stopButton">Stop Timer</button>
+
+    <script>
+        // Selecting elements
+        const message = document.getElementById('message');
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+
+        // Variable to store the timeout ID
+        let timeoutId;
+
+        // Function to display a message after a delay
+        function delayedMessage() {
+            message.textContent = "Hello, this message appeared after 3 seconds!";
+        }
+
+        // Start the timer when the "Start Timer" button is clicked
+        startButton.addEventListener('click', () => {
+            message.textContent = "Wait for it...";
+            // Set a timeout to display the message after 3000 milliseconds (3 seconds)
+            timeoutId = setTimeout(delayedMessage, 3000);
+        });
+
+        // Stop the timer when the "Stop Timer" button is clicked
+        stopButton.addEventListener('click', () => {
+            // Clear the timeout using the timeoutId
+            clearTimeout(timeoutId);
+            message.textContent = "Timer stopped!";
+        });
+
+    </script>
+</body>
+
+</html>

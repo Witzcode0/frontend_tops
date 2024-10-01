@@ -1,0 +1,7 @@
+Exception Handling in JavaScript allows you to handle runtime errors gracefully, preventing the program from crashing and providing meaningful feedback to the user or allowing the program to continue. JavaScript uses the try...catch block to handle exceptions, along with the throw keyword to manually raise exceptions.
+
+Basic Syntax
+- try block: Contains code that may throw an error.
+- catch block: Handles the error if one occurs in the try block.
+- finally block (optional): Always executes after the try and catch blocks, regardless of whether an exception was thrown or not.
+- throw keyword: Used to manually throw an exception.

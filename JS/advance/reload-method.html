@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reload Page Example</title>
+</head>
+
+<body>
+    <h1>Reload Page Example</h1>
+    <button id="reloadButton">Reload Page</button>
+    <button id="hardReloadButton">Hard Reload Page</button>
+
+    <script>
+        // Selecting the buttons
+        const reloadButton = document.getElementById('reloadButton');
+        const hardReloadButton = document.getElementById('hardReloadButton');
+
+        // Reload the page using cache
+        reloadButton.addEventListener('click', () => {
+            location.reload(); // Reloads the page using cache
+        });
+
+        // Hard reload the page from the server
+        hardReloadButton.addEventListener('click', () => {
+            location.reload(true); // Forces a reload from the server
+        });
+
+    </script>
+</body>
+
+</html>

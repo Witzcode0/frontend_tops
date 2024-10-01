@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set and Get Attribute Example</title>
+</head>
+
+<body>
+    <h1 id="heading">Hello, World!</h1>
+    <button id="setButton">Set Attribute</button>
+    <button id="getButton">Get Attribute</button>
+
+    <script>
+        // Selecting the elements
+        const heading = document.getElementById('heading');
+        const setButton = document.getElementById('setButton');
+        const getButton = document.getElementById('getButton');
+
+        // Adding an event listener to set the attribute
+        setButton.addEventListener('click', () => {
+            // Set a custom attribute on the heading
+            heading.setAttribute('data-custom', 'customValue');
+            alert('Attribute "data-custom" set to "customValue"!');
+        });
+
+        // Adding an event listener to get the attribute
+        getButton.addEventListener('click', () => {
+            // Get the custom attribute from the heading
+            const customAttr = heading.getAttribute('data-custom');
+            if (customAttr) {
+                alert(`Custom attribute value: ${customAttr}`);
+            } else {
+                alert('No custom attribute found!');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
