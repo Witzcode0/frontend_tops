@@ -2,5 +2,11 @@
   "dependencies": {
     "install": "^0.13.0",
     "scss": "^0.2.4"
+  },
+  "name": "your-project",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
   }
 }
