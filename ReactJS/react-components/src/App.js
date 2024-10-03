@@ -5,6 +5,8 @@ import './App.css';
 import GreetingByFunction from './Components/Functions/Greeting';
 import GreetingByClass from './Components/Class/Greeting';
 import { IncDecQty, ShowAge } from './Components/Rstate/Cstate';
+import  Maincontent  from './Components/Cui/Cmulti';
+import AllEvents from './Components/Cevents/Cmainevents'
 
 // Class base first component
 class App extends Component {
@@ -15,10 +17,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GreetingByFunction name="Brijesh Gondaliya" />
-        <ShowAge />
-        <GreetingByClass company="Tops Technologies Pvt. Ltd." position="Sr. Technical Trainers" />
-        <IncDecQty />
+        {/* <GreetingByFunction name="Brijesh Gondaliya" /> */}
+        {/* <ShowAge /> */}
+        {/* <GreetingByClass company="Tops Technologies Pvt. Ltd." position="Sr. Technical Trainers" /> */}
+        {/* <IncDecQty /> */}
+
+        {/* <Maincontent/> */}
+
+        <AllEvents/>
       </div>
     )
   }
