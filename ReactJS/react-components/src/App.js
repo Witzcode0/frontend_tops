@@ -7,6 +7,14 @@ import GreetingByClass from './Components/Class/Greeting';
 import { IncDecQty, ShowAge } from './Components/Rstate/Cstate';
 import  Maincontent  from './Components/Cui/Cmulti';
 import AllEvents from './Components/Cevents/Cmainevents'
+import CalC from './Components/Calculator/Asmd';
+import ToggleDiv from './Components/HideUnhide/Toggle';
+import MainPropsPropTypes from './Components/PropsPropType/Greeting';
+import ArrayUpdater from './Components/UpdateArrayInState/main';
+import Posts from './Components/ApiToTable/main';
+
+
+
 
 // Class base first component
 class App extends Component {
@@ -24,7 +32,17 @@ class App extends Component {
 
         {/* <Maincontent/> */}
 
-        <AllEvents/>
+        {/* <AllEvents/> */}
+
+        {/* <CalC/> */}
+
+        {/* <ToggleDiv /> */}
+
+        {/* <MainPropsPropTypes/> */}
+
+         {/* <ArrayUpdater/> */}
+         
+         <Posts/>
       </div>
     )
   }

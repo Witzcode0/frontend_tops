@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    gap: 10px;
+    margin: 50px;
+}
+
+.item{
+    width: 200px;
+    border: 1px solid #1c7d61;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+    transition: background-color 0.3s ease;
+    background-color: #d7fff4
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #1c7d61;
+}

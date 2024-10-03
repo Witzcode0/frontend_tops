@@ -1,9 +1,13 @@
 import MainChange from "./Change";
 import MainClick from "./Click";
+import MainCopyCutPaste from "./Clipboard";
 import MainFocusBlur from "./Focusblur";
 import MainKeys from "./Keys";
 import MainMouse from "./Mouse";
 import MainSubmit from "./Submit";
+import MainDragDrop from "./DragDrop";
+import MainTouch from "./Touch";
+import MainScroll from "./Scroll";
 
 function AllEvents(){
     return (
@@ -34,6 +38,18 @@ function AllEvents(){
 
             <h1>Event : Onblur</h1>
             <MainFocusBlur/>
+
+            <h1>Event: OnCopy, OnCut, OnPaste</h1>
+            <MainCopyCutPaste />
+
+            <h1>Event: OnDrag, OnDrop</h1>
+            <MainDragDrop />
+
+            <h1>Event: OnTouchStart, OnTouchEnd</h1>
+            <MainTouch />
+
+            <h1>Event: OnScroll</h1>
+            <MainScroll />
 
         </div>
     )

@@ -8,6 +8,7 @@ function MainMouse() {
     function handleMouseOut() {
         console.log('Mouse left the element');
     }
+    
 
     return (
         <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
