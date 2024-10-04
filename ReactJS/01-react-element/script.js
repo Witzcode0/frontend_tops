@@ -24,8 +24,10 @@ const sections = Array.from({ length: 5 }, (_, index) =>
     }),
     React.createElement(
       "h1",
-      { className: "heading" },
-      `React App - Section ${index + 1}`
+      { className: "heading", style:{
+        color:"orange",
+      } },
+      `Title ${index + 1}`
     ),
     React.createElement(
       "p",
@@ -34,7 +36,7 @@ const sections = Array.from({ length: 5 }, (_, index) =>
     ),
     React.createElement(
       "button",
-      { className: "btn-dark", style: { color: "red" } },
+      { className: "btn-dark", style: { color: "white", backgroundColor:"orange", padding:"10px", fontSize:"24px", border:"none", borderRadius:"10px" } },
       "Buy now"
     ),
   ])
