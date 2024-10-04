@@ -9,8 +9,14 @@ function MainChange() {
 
     return (
         <div>
-            <p>You have enterd: {inputValue}</p>
-            <input type="text" value={inputValue} onChange={handleChange} placeholder="Enter something " />
+            <p>You have entered: {inputValue}</p>
+            <input 
+                type="text" 
+                value={inputValue} 
+                onChange={handleChange} 
+                placeholder="Enter something" 
+                style={{ border: 'none' }} // Remove the border
+            />
         </div>
     );
 }
