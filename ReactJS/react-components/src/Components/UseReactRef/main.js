@@ -1,5 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 
+/*
+useRef is a hook in React that returns a mutable ref object, which can persist values between renders without triggering a re-render when updated. It is commonly used to directly access and interact with DOM elements or to store mutable values across renders.
+
+React Refs (ref attributes) are a way to reference DOM elements or class component instances directly within your React components. They provide an escape hatch for directly accessing and manipulating DOM elements or React component instances when needed, without involving the typical data flow via props and state.
+*/
+
 function MainUseReactRef() {
   const inputRef = useRef(null);
   const textAreaRef = useRef(null);
