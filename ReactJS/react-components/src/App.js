@@ -13,7 +13,7 @@ import MainPropsPropTypes from './Components/PropsPropType/Greeting';
 import ArrayUpdater from './Components/UpdateArrayInState/main';
 import Posts from './Components/ApiToTable/main';
 import MainUseReactRef from './Components/UseReactRef/main';
-import A from './Components/HookUseContext/A';
+import IndexOne from './Components/HookUseContext/A';
 
 
 
@@ -48,7 +48,7 @@ class App extends Component {
 
          {/* <MainUseReactRef /> */}
 
-         <A />
+         <IndexOne />
 
       </div>
     )

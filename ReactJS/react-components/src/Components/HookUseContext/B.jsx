@@ -1,20 +1,24 @@
-import React, { Component } from "react";
-import C from "./C";
+import React from "react";
+import { myContext } from "./A";
 
-class B extends Component {
+class IndexTwo extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>This is Index Two Component</h1>
+        <myContext.Consumer>
+          {
+            (value) => (
+              <div>
+                <p>Name: {value.name}</p>
+                <p>Age: {value.age}</p>
+              </div>
+            )
+          }
+        </myContext.Consumer>
+      </div>
+    );
+  }
+}
 
-    render() {
-
-        return (
-            <div>
-                <h1>Component B</h1>
-                <p>This is a child component of Component A.</p>
-
-                {/* <C name={this.state.name} age={this.state.age} /> */}
-
-            </div>
-        );
-    }
-};
-
-export default B;
+export default IndexTwo;

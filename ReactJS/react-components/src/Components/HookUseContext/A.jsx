@@ -1,25 +1,26 @@
-import React, { Component } from "react";
-import B from "./B";
+import React from "react";
+import IndexTwo from "./B";
 
-class A extends Component {
+export const myContext = React.createContext();
 
-    state = {
-        name:"Brijesh Gondaliya",
-        age:25
-    }
-
+class IndexOne extends React.Component {
   render() {
+    const contextValue = {
+      name: 'Brijesh Gondaliya',
+      age: 28,
+      location: 'Surat'
+    };
+
     return (
       <div>
-        <h1>Component A</h1>
-        <p>My name is: {this.state.name}</p>
-        <p>I am {this.state.age} years old</p>
-        <B name={this.state.name} age={this.state.age} />
-
+        <h1>How to use the useContext method in React?</h1>
+        <h3>Welcome to Index One</h3>
+        <myContext.Provider value={contextValue}>
+          <IndexTwo />
+        </myContext.Provider>
       </div>
     );
   }
 }
 
-
-export default A
+export default IndexOne;
