@@ -14,6 +14,9 @@ import ArrayUpdater from './Components/UpdateArrayInState/main';
 import Posts from './Components/ApiToTable/main';
 import MainUseReactRef from './Components/UseReactRef/main';
 import IndexOne from './Components/HookUseContext/A';
+import MainReducerHook from './Components/UseReducerHook/main';
+import MainCallbackMemo from './Components/UseCallbackMemoHook/main';
+import MainForm from './Components/FormData/main';
 
 
 
@@ -48,7 +51,13 @@ class App extends Component {
 
          {/* <MainUseReactRef /> */}
 
-         <IndexOne />
+         {/* <IndexOne /> */}
+         
+         {/* <MainReducerHook /> */}
+
+         {/* <MainCallbackMemo /> */}
+
+         <MainForm />
 
       </div>
     )
