@@ -17,7 +17,7 @@ import IndexOne from './Components/HookUseContext/A';
 import MainReducerHook from './Components/UseReducerHook/main';
 import MainCallbackMemo from './Components/UseCallbackMemoHook/main';
 import MainForm from './Components/FormData/main';
-
+import TaskManager from './Components/CRUDWithArray/main';
 
 
 
@@ -57,7 +57,9 @@ class App extends Component {
 
          {/* <MainCallbackMemo /> */}
 
-         <MainForm />
+         {/* <MainForm /> */}
+
+         <TaskManager />
 
       </div>
     )
