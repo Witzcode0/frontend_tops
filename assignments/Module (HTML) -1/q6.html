@@ -1,0 +1,107 @@
+<!-- create form using table -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+        }
+        .form-container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            display: inline-block;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 2px solid orange;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        caption {
+            text-align: start;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        td {
+            padding: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #e5902f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #d4791e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-title">Registration</div>
+    
+    <table>
+        <caption>Personal Details</caption>
+        <tr>
+            <td><label for="">Full Name</label> <br> <input type="text" placeholder="Enter your name"></td>
+            <td><label for="">Father Name</label> <br> <input type="text" placeholder="Enter father name"></td>
+            <td><label for="">Mother Name</label> <br> <input type="text" placeholder="Enter mother name"></td>
+        </tr>
+        <tr>
+            <td><label for="">Date of Birth</label> <br> <input type="text" placeholder="Enter your DOB"></td>
+            <td><label for="">Aadhar number</label> <br> <input type="text" placeholder="Enter aadhar number"></td>
+            <td><label for="">Email</label> <br> <input type="text" placeholder="Enter your email"></td>
+        </tr>
+        <tr>
+            <td><label for="">Mobile</label> <br> <input type="text" placeholder="Enter your mobile"></td>
+            <td><label for="">Gender</label> <br> <input type="text" placeholder="Enter your gender"></td>
+            <td><label for="">Address</label> <br> <input type="text" placeholder="Enter your address"></td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Other Details</caption>
+        <tr>
+            <td><label for="">Stream</label> <br> <input type="text" placeholder="Enter your stream"></td>
+            <td><label for="">Previous Class</label> <br> <input type="text" placeholder="Enter previous class"></td>
+            <td><label for="">Hobbies</label> <br> <input type="text" placeholder="Enter your hobbies"></td>
+        </tr>
+        <tr>
+            <td><label for="">Account Number</label> <br> <input type="text" placeholder="Enter account number"></td>
+            <td><label for="">Religion</label> <br> <input type="text" placeholder="Enter your religion"></td>
+            <td><label for="">Category</label> <br> <input type="text" placeholder="Enter your category"></td>
+        </tr>
+    </table>
+
+    <button class="submit-btn">Submit</button>
+</div>
+
+</body>
+</html>
