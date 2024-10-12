@@ -3,59 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Gallery</title>
     <style>
         .container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .section{
-            flex-basis: 30%;
-            background-color:cornflowerblue;
+            border: 1px solid #ccc;
+            height:    100vh;
             padding: 10px;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
         }
-        h1 {
-            color: #010246;
+        .image {
+            border: 1px solid #ccc;
+            background-size: cover;
+            background-position: center;
         }
-        .btns{
-            display: flex;
-            justify-content: space-between;
-            
+        .image-1 {
+            background-image: url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww');
+            grid-row: 1 / span 2;
         }
-        .btn{
-            flex-basis: 24%;
+        .image-2 {
+            background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            grid-column: 2 / -1;
         }
-        .full-btn{
-            width: 100%;
-            margin-top: 10px;
+        .image-3 {
+            background-image: url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg');
+            grid-row: 2 / 2;
+        }
+        .image-4 {
+            background-image: url('https://media.istockphoto.com/id/1284671318/photo/meadows-in-the-snow-peak-mountains-of-himalaya.jpg?s=612x612&w=is&k=20&c=P3o2HRsF33Z2eTqjTTbkJ40tf42FQ0Drhk85_7fyEgE=');
+            grid-row: 2 / 4;
+        }
+        .image-5 {
+            background-image: url('https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg');
+            grid-column: 1 / 3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="section left">
-            <h1>heading 1</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum laudantium maxime aut placeat. Reiciendis pariatur cum voluptate aspernatur in itaque, laborum nam inventore veniam consequuntur accusantium maxime aliquid est harum obcaecati deserunt fugiat excepturi, distinctio quibusdam nobis! Commodi est, optio voluptates sapiente consequuntur eaque provident? Quos omnis earum quae? Quaerat.</p>
-        </div>
-        <div class="section middle">
-            <h1>heading 2</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum laudantium maxime aut placeat. Reiciendis pariatur cum voluptate aspernatur in itaque, laborum nam inventore veniam consequuntur accusantium maxime aliquid est harum obcaecati deserunt fugiat excepturi, distinctio quibusdam nobis! Commodi est, optio voluptates sapiente consequuntur eaque provident? Quos omnis earum quae? Quaerat.</p>
-        </div>
-        <div class="section right">
-            <div class="btns">
-                <button class="btn">Button 1</button>
-                <button class="btn">Button 2</button>
-                <button class="btn">Button 3</button>
-                <button class="btn">Button 4</button>
-            </div>
-            <div class="main-btn">
-                <button class="full-btn">Main Button</button>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptates laudantium suscipit nihil facilis reiciendis neque aut eveniet consectetur veritatis, quia alias dolore? Quaerat, non?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto esse at expedita, velit consequatur, iure nemo mollitia quaerat, a autem cupiditate eligendi atque officia tempore.</p>
-        </div>
+        <div class="image image-1"></div>
+        <div class="image image-2"></div>
+        <div class="image image-3"></div>
+        <div class="image image-4"></div>
+        <div class="image image-5"></div>
     </div>
 </body>
 </html>

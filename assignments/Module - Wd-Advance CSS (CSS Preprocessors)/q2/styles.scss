@@ -1,0 +1,38 @@
+// Define a mixin for flexbox
+@mixin flexbox($direction: row, $justify: center, $align: center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+.container {
+    @include flexbox(row, space-around, flex-start, wrap);
+    gap: 10px;
+}
+
+.section {
+    flex-basis: 30%;
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; // Center text within the card
+}
+
+h1 {
+    color: #010246;
+}
+
+.btns {
+    @include flexbox(row, space-between, center);
+}
+
+.btn {
+    flex-basis: 48%; // Adjusted for better spacing
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 10px;
+}

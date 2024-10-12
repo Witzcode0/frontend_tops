@@ -1,0 +1,42 @@
+$gap: 10px;
+$bg-color: cornflowerblue;
+$text-color: #010246;
+
+@mixin section-style {
+    flex-basis: 30%;
+    background-color: $bg-color;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
+.section {
+    @include section-style; 
+}
+
+h1 {
+    color: $text-color;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    flex-basis: 24%;
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.right {
+    @extend .section; 
+}

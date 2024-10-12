@@ -1,0 +1,53 @@
+<!-- create some shape using canvas tag in html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Shapes</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="400" style="border:1px solid #000;"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const obj = canvas.getContext("2d");
+
+        const sameSideSquare = obj.createLinearGradient(50, 50, 150, 50);
+        sameSideSquare.addColorStop(0, "orange");
+        sameSideSquare.addColorStop(1, "red");
+
+        obj.fillStyle = sameSideSquare;
+        obj.fillRect(50, 50, 150, 150);
+
+        const circleGradient = obj.createRadialGradient(300, 100, 0, 300, 100, 50);
+        circleGradient.addColorStop(0, "rgba(255, 0, 0, 1)");   
+        circleGradient.addColorStop(0.14, "rgba(255, 127, 0, 1)");
+        circleGradient.addColorStop(0.28, "rgba(255, 255, 0, 1)"); 
+        circleGradient.addColorStop(0.43, "rgba(0, 255, 0, 1)");   
+        circleGradient.addColorStop(0.57, "rgba(0, 0, 255, 1)");   
+        circleGradient.addColorStop(0.71, "rgba(75, 0, 130, 1)");  
+        circleGradient.addColorStop(0.85, "rgba(148, 0, 211, 1)"); 
+        circleGradient.addColorStop(1, "rgba(255, 0, 0, 1)");       
+
+        obj.beginPath();
+        obj.arc(300, 100, 50, 0, 2 * Math.PI);
+        obj.fillStyle = circleGradient;
+        obj.fill();
+        obj.closePath();
+
+
+
+
+        const rectangleGradient = obj.createLinearGradient(450, 50, 600, 50);
+        rectangleGradient.addColorStop(0, "orange");
+        rectangleGradient.addColorStop(1, "#FF00FF");
+        obj.fillStyle = rectangleGradient;
+        obj.fillRect(450, 50, 150, 75); 
+    </script>
+</body>
+
+</html>

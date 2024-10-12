@@ -1,0 +1,49 @@
+
+@border-color: #ccc;
+@gap: 10px;
+@height: 100vh;
+@image-background-size: cover;
+@image-background-position: center;
+
+.image-style(@image-url) {
+    background-image: url(@image-url);
+    border: 1px solid @border-color;
+    background-size: @image-background-size;
+    background-position: @image-background-position;
+}
+.container {
+    border: 1px solid @border-color;
+    height: @height;
+    padding: @gap;
+    display: grid;
+    gap: @gap;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.image {
+    .image-style(''); 
+}
+.image-1 {
+    .image-style('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww');
+    grid-row: 1 / span 2;
+}
+
+.image-2 {
+    .image-style('https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    grid-column: 2 / -1;
+}
+
+.image-3 {
+    .image-style('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg');
+    grid-row: 2 / 2;
+}
+
+.image-4 {
+    .image-style('https://media.istockphoto.com/id/1284671318/photo/meadows-in-the-snow-peak-mountains-of-himalaya.jpg?s=612x612&w=is&k=20&c=P3o2HRsF33Z2eTqjTTbkJ40tf42FQ0Drhk85_7fyEgE=');
+    grid-row: 2 / 4;
+}
+
+.image-5 {
+    .image-style('https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg');
+    grid-column: 1 / 3;
+}
