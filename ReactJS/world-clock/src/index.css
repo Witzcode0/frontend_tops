@@ -1,0 +1,58 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4a90e2;
+}
+
+.country-selection-container {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.country-dropdown {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.time-display {
+  background-color: #e7f3fe;
+  padding: 15px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.time-display h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.time-display p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}

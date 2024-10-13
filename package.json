@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "install": "^0.13.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "vite": "^5.4.8"
   },
   "name": "your-project",
   "version": "1.0.0",
