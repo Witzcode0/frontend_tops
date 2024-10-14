@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .header-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header nav .header-menus {
+  width: 100%;
+}
+header nav .header-menus ul {
+  display: flex;
+  justify-content: center;
+}
+header nav .header-menus ul li {
+  margin-left: 10px;
+}
+header nav .header-accounts {
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */

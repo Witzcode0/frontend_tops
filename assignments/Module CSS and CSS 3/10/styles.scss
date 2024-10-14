@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    nav{
+        display: flex;
+        justify-content: space-between;
+
+        .header-logo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .header-menus{
+            width: 100%;
+            ul{
+                display: flex;
+                justify-content: center;
+
+                li{
+                    margin-left: 10px;
+                }
+            }
+        }
+        .header-accounts{
+            width: 100%;
+        }
+    }
+
+}
