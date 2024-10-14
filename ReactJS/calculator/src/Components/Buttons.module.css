@@ -1,0 +1,19 @@
+.Btn {
+  padding: 15px;
+  font-size: 18px;
+  width: 75px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.Btn:hover {
+  background-color: #4067bb;
+  color: #fff;
+}
+
+.Btn:active {
+  background-color: #bbb;
+}
