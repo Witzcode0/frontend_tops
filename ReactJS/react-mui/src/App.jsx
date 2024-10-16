@@ -4,6 +4,10 @@ import Hero from './Components/Hero';
 import Navbar from './Components/Navbar';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Services from './Components/Services';
+import ImageSection from './Components/ImageSection';
+import Footer from './Components/Footer';
+
 
 const theme = createTheme({
   palette: {
@@ -21,7 +25,10 @@ function App(){
       <ThemeProvider theme={theme}>
         <Navbar />
         <Hero />
+        <Services></Services>
+        <ImageSection></ImageSection>
         <ContactForm></ContactForm>
+        <Footer />
       </ThemeProvider>
     </>
   )
