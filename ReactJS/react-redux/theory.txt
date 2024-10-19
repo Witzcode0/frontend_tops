@@ -1,0 +1,88 @@
+Redux Basics
+
+Redux is a state management library for JavaScript applications, commonly used with React. It helps to manage application state in a predictable and consistent way. The main components of Redux are:
+
+ - Store: The single source of truth, holding the entire state of the application.
+ - Actions: Plain JavaScript objects that describe the type of event that will cause a state change. They typically include a type property and may also contain a payload.
+ - Reducers: Pure functions that take the current state and an action as arguments, and return a new state.
+ - Dispatch: The method used to send an action to the Redux store.
+ - Selectors: Functions used to extract specific data from the store.
+
+Redux Principles
+
+Redux operates based on three fundamental principles:
+
+1] Single Source of Truth: The entire state of the application is stored in a single object, called the store.
+2] State is Read-Only: The state can only be changed by dispatching actions, which are plain objects describing what happened.
+3] Changes are Made with Pure Functions: Reducers are pure functions that take the previous state and an action, and return the next state without modifying the original state.
+
+Implementing Redux
+
+To implement Redux in a React application, follow these steps:
+
+Step - 1] Install Redux and React-Redux:
+>>> npm install redux react-redux
+
+Step - 2] Create Actions: Define action types and action creators.
+export const INCREMENT = 'increment';
+export const DECREMENT = 'decrement';
+
+export const increment = () => ({
+    type: INCREMENT,
+});
+
+export const decrement = () => ({
+    type: DECREMENT,
+});
+
+Step - 3] Create a Reducer: Define how the state should change based on the action type.
+
+import { INCREMENT, DECREMENT } from "../Actions/IncDecAction";
+
+const initialState = {
+    count: 0
+};
+
+const IncDecCounterReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case INCREMENT:
+            return { count: state.count + 1 };
+        case DECREMENT:
+            return { count: state.count - 1 };
+        default:
+            return state;
+    }
+};
+
+export default IncDecCounterReducer;
+
+State - 4] Create the Store: Set up the Redux store using the reducer.
+
+// store.jsx
+import { createStore } from "redux";
+import IncDecCounterReducer from "./Reducers/IncDecReducer";
+
+const store = createStore(
+    IncDecCounterReducer
+);
+
+export default store;
+
+Step - 5] Integrate Redux with React: Use the Provider component to pass the store to the entire app.
+
+// main.jsx
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import { Provider } from 'react-redux'
+import store from './store.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>,
+)
