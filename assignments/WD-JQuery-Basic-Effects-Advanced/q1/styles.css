@@ -1,0 +1,41 @@
+/* styles.css */
+.slider {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background: #eee;
+  padding: 100px;
+  font-size: 2rem;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
