@@ -1,0 +1,62 @@
+<!-- Form in Email, mobile, Password, Validation?    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <br><br>
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <button type="submit" >Submit</button>
+    </form>
+
+    <script>
+       function validateForm() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var mobile = document.getElementById('mobile').value;
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        var mobileRegex = /^[0-9]+$/;
+
+        if (username == "" || email == "" || password == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+
+        if (!emailRegex.test(email)) {
+            alert("Invalid email format");
+            return false;
+        }
+
+        if (!mobileRegex.test(mobile) || mobile.length < 10 || mobile.length > 15) {
+            alert("Invalid mobile format. It should be between 10 and 15 digits long");
+            return false;
+        }
+
+        if (!passwordRegex.test(password)) {
+            alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one mobile, and one special character");
+            return false;
+        }
+        return true;   
+       }
+    </script>
+</body>
+</html>

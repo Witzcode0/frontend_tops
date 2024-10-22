@@ -1,0 +1,108 @@
+<!-- - Dynamic Form Validation in JS? 
+
+- Dynamic form validation in JavaScript refers to real-time validation as the user is interacting with the form. This type of validation checks each input as the user fills in the fields, providing instant feedback without waiting for the form to be submitted. It enhances the user experience by notifying users of errors immediately, allowing them to correct mistakes on the go.
+
+- Steps to Implement Dynamic Form Validation in JavaScript:
+- Listen for input events: Use JavaScript event listeners like input, blur, or change to trigger validation as the user types or changes a field value.
+- Real-time validation: Check each field's value dynamically, and show or hide error messages based on validation results.
+- Disable/enable submit button: The form's submit button can be disabled until all fields are valid. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .valid {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Sign Up Form</h2>
+    <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error"></span><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span><br><br>
+
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("name").addEventListener("input", validateName);
+        document.getElementById("email").addEventListener("input", validateEmail);
+        document.getElementById("password").addEventListener("input", validatePassword);
+        document.getElementById("signupForm").addEventListener("input", checkFormValidity);
+
+        function validateName() {
+            let name = document.getElementById("name").value;
+            let nameError = document.getElementById("nameError");
+
+            if (name.trim() === "") {
+                nameError.textContent = "Name is required.";
+                return false;
+            } else {
+                nameError.textContent = "";
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let emailError = document.getElementById("emailError");
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (email.trim() === "") {
+                emailError.textContent = "Email is required.";
+                return false;
+            } else if (!emailPattern.test(email)) {
+                emailError.textContent = "Invalid email format.";
+                return false;
+            } else {
+                emailError.textContent = "";
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            let passwordError = document.getElementById("passwordError");
+
+            if (password.length < 6) {
+                passwordError.textContent = "Password must be at least 6 characters long.";
+                return false;
+            } else {
+                passwordError.textContent = "";
+                return true;
+            }
+        }
+
+        function checkFormValidity() {
+            let submitBtn = document.getElementById("submitBtn");
+
+            if (validateName() && validateEmail() && validatePassword()) {
+                submitBtn.disabled = false;  
+            } else {
+                submitBtn.disabled = true;   
+            }
+        }
+
+    </script>
+</body>
+
+</html>
