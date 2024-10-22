@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(15, 14, 14);
+        }
+        #para {
+            margin: 10px;
+            text-align: justify;
+            padding: 20px;
+            background-color: rgb(231, 228, 14);
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(231, 228, 14);
+            color: black;
+            border: none;
+            border-radius: 10px;
+        }
+        #para.animated {
+            animation: fadeAndSlide 2s ease-in-out infinite;
+
+        }
+    </style>
+</head>
+<body>
+     
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ad animi veniam quibusdam cumque accusantium exercitationem, alias expedita natus suscipit vel tempora fugit voluptates temporibus enim modi! Maiores, praesentium ullam?</p>
+
+    <button id="btnU">Click Up</button>
+    <button id="btnD">Click Down</button>
+    <button id="btnT">Click Toggle</button>
+    <script>
+        $(document).ready(function(){
+            $("#btnU").click(function(){
+                $("#para").slideUp("slow");
+
+            })
+        });
+        $(document).ready(function(){
+            $("#btnD").click(function(){
+                $("#para").slideDown("slow");
+            })
+        });
+        $(document).ready(function(){
+            $("#btnT").click(function(){
+                $("#para").slideToggle("slow");
+            })
+        });
+
+    </script>
+</body>
+</html>

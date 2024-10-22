@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body {
-            counter-reset: section;
-        }
+      body {
+        counter-reset: section;
+      }
 
-        ul > li.outer::before {
-            counter-increment: section;
-            content: "Topic " counter(section) ". ";
-        }
+      ul > li.outer::before {
+        counter-increment: section;
+        content: "Topic " counter(section) ". ";
+      }
 
-        ul li.outer ul {
-            counter-reset: subsection;
-        }
+      ul li.outer ul {
+        counter-reset: subsection;
+      }
 
-        ul li.outer ul li.inner::before {
-            counter-increment: subsection;
-            content: counter(section) "." counter(subsection) " ";
-        }
+      ul li.outer ul li.inner::before {
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) " ";
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <ul>
-        <li class="outer">Fruits
-            <ul>
-                <li class="inner">Apple</li>
-                <li class="inner">Banana</li>
-                <li class="inner">Orange</li>
-            </ul>
-        </li>
-        <li class="outer">Vegetables
-            <ul>
-                <li class="inner">Carrot</li>
-                <li class="inner">Potato</li>
-                <li class="inner">Onion</li>
-            </ul>
-        </li>
+      <li class="outer">
+        Fruits
+        <ul>
+          <li class="inner">Apple</li>
+          <li class="inner">Banana</li>
+          <li class="inner">Orange</li>
+        </ul>
+      </li>
+      <li class="outer">
+        Vegetables
+        <ul>
+          <li class="inner">Carrot</li>
+          <li class="inner">Potato</li>
+          <li class="inner">Onion</li>
+        </ul>
+      </li>
     </ul>
-</body>
+  </body>
 </html>

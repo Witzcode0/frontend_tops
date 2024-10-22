@@ -1,84 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        :root{
-            --darkPurple : #0f0327;
-            --lightPurple1 : #d2bce4;
-            --lightPurple2:#996dba;
-            --lightPurple3 : #904abc;
-            
-        }
+      :root {
+        --darkPurple: #0f0327;
+        --lightPurple1: #d2bce4;
+        --lightPurple2: #996dba;
+        --lightPurple3: #904abc;
+      }
 
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        .container{
-            height: 100vh;
-            width: 100%;
-            border: 1px solid var(--darkPurple);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+      .container {
+        height: 100vh;
+        width: 100%;
+        border: 1px solid var(--darkPurple);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
+      .box {
+        color: var(--lightPurple3);
+        border: 1px solid var(--darkPurple);
+      }
+
+      .box-1,
+      .box-2,
+      .box-3,
+      .box-4 {
+        flex-basis: calc(25% - 20px);
+        height: 20vh;
+        padding: 20px;
+        text-align: justify;
+      }
+
+      .box-5,
+      .box-6 {
+        flex-basis: calc(50% - 20px);
+
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        text-align: justify;
+      }
+
+      @media (max-width: 480px) {
         .box {
-            color: var(--lightPurple3);
-            border: 1px solid var(--darkPurple);
+          flex-basis: 100%;
+          overflow: hidden;
         }
-        
-        .box-1, .box-2, .box-3, .box-4{
-            flex-basis: calc(25% - 20px); 
-            height: 20vh;
-            padding: 20px;
-            text-align: justify;
+      }
+      @media (min-width: 481) and (max-width: 768px) {
+        .box {
+          flex-basis: 50%;
+          overflow: hidden;
         }
-
-        .box-5, .box-6 {
-            flex-basis: calc(50% - 20px); 
-    
-            height:60vh;
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            text-align: justify;;
-        }
-
-        @media (max-width: 480px) {
-            .box{
-                flex-basis: 100%;
-                overflow: hidden;
-            }
-        }
-        @media (min-width: 481) and (max-width: 768px) {
-            .box{
-                flex-basis: 50%;
-                overflow: hidden;
-            }
-
-        }
-        @media (min-width: 768px) {
-
-        }
-
+      }
+      @media (min-width: 768px) {
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="box box-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?</div>
-        <div class="box box-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?</div>
-        <div class="box box-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?</div>
-        <div class="box box-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?</div>
-        <div class="box box-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, suscipit repudiandae voluptatibus iusto accusantium alias quia soluta assumenda sunt, odio autem eaque perspiciatis doloremque laudantium mollitia? Et eligendi ab excepturi modi, a totam vitae repudiandae debitis omnis laboriosam voluptate ut. Odio soluta est cumque! Maiores molestiae velit molestias. Excepturi harum doloremque quidem assumenda eius quam neque tenetur? Nisi veritatis ea architecto nulla, quae non tempora nemo animi quaerat corporis. Ab dolores quis harum quos, sint veritatis numquam quasi, quidem, reiciendis illo quisquam! Aut modi, adipisci commodi impedit quod cum? Doloremque exercitationem eligendi quam consectetur officia autem quis quos placeat. Molestias, consequuntur consequatur quas architecto perferendis nam quaerat, quod, consectetur nisi laudantium deserunt dolore. Fugit magnam reiciendis, adipisci atque omnis sit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore delectus obcaecati, beatae iusto quae accusamus quas debitis. Impedit quibusdam pariatur labore recusandae voluptate repellendus numquam reprehenderit mollitia laborum. At, voluptatem. </div>
-        <div class="box box-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corrupti voluptatibus et blanditiis optio? At, placeat laboriosam cupiditate est unde nostrum veritatis odit voluptates vel quam ullam pariatur ipsa nisi amet nam a. Delectus voluptate ex dignissimos, facilis distinctio voluptates adipisci voluptas quibusdam accusantium necessitatibus quidem ullam atque corrupti beatae porro excepturi illo architecto, modi perferendis, tenetur iste consequuntur vero ab voluptatibus? Ab perspiciatis necessitatibus atque exercitationem, sit recusandae beatae vero non quaerat sequi dolores vitae nisi. Hic eligendi alias commodi, totam explicabo, ex eveniet praesentium aut fugit sed est reprehenderit? Delectus reiciendis tempore voluptatem fuga hic nisi facere sunt!</div>
+      <div class="box box-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
+      </div>
+      <div class="box box-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
+      </div>
+      <div class="box box-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
+      </div>
+      <div class="box box-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
+      </div>
+      <div class="box box-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+        suscipit repudiandae voluptatibus iusto accusantium alias quia soluta
+        assumenda sunt, odio autem eaque perspiciatis doloremque laudantium
+        mollitia? Et eligendi ab excepturi modi, a totam vitae repudiandae
+        debitis omnis laboriosam voluptate ut. Odio soluta est cumque! Maiores
+        molestiae velit molestias. Excepturi harum doloremque quidem assumenda
+        eius quam neque tenetur? Nisi veritatis ea architecto nulla, quae non
+        tempora nemo animi quaerat corporis. Ab dolores quis harum quos, sint
+        veritatis numquam quasi, quidem, reiciendis illo quisquam! Aut modi,
+        adipisci commodi impedit quod cum? Doloremque exercitationem eligendi
+        quam consectetur officia autem quis quos placeat. Molestias,
+        consequuntur consequatur quas architecto perferendis nam quaerat, quod,
+        consectetur nisi laudantium deserunt dolore. Fugit magnam reiciendis,
+        adipisci atque omnis sit. Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Corrupti, natus. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Labore delectus obcaecati, beatae iusto
+        quae accusamus quas debitis. Impedit quibusdam pariatur labore
+        recusandae voluptate repellendus numquam reprehenderit mollitia laborum.
+        At, voluptatem.
+      </div>
+      <div class="box box-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corrupti
+        voluptatibus et blanditiis optio? At, placeat laboriosam cupiditate est
+        unde nostrum veritatis odit voluptates vel quam ullam pariatur ipsa nisi
+        amet nam a. Delectus voluptate ex dignissimos, facilis distinctio
+        voluptates adipisci voluptas quibusdam accusantium necessitatibus quidem
+        ullam atque corrupti beatae porro excepturi illo architecto, modi
+        perferendis, tenetur iste consequuntur vero ab voluptatibus? Ab
+        perspiciatis necessitatibus atque exercitationem, sit recusandae beatae
+        vero non quaerat sequi dolores vitae nisi. Hic eligendi alias commodi,
+        totam explicabo, ex eveniet praesentium aut fugit sed est reprehenderit?
+        Delectus reiciendis tempore voluptatem fuga hic nisi facere sunt!
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -4,7 +4,7 @@
 "use strict";
 
 function myFunction() {
-    x = 3.14;  // Throws an error because x is not declared
+  x = 3.14; // Throws an error because x is not declared
 }
 
 myFunction();

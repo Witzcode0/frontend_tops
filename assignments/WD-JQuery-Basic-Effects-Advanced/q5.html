@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Effects on Image</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="fadIn">Fade In</button>
+    <button id="fadOut">Fade Out</button>
+    <button id="fadTog">Fade Toggle</button>
+    <button id="fadTo">Fade To</button>
+
+    <br><br>
+
+    <img id="image" src="https://spn-sta.spinny.com/blog/20221004191046/Hyundai-Venue-2022.jpg?compress=true&quality=80&w=1200&dpr=2.6" alt="Sample Image" style="display:none; height: 25vh;" />
+
+    <script>
+        $(document).ready(function(){
+            $("#fadIn").click(function(){
+                $("#image").fadeIn("slow");
+            });
+
+            $("#fadOut").click(function(){
+                $("#image").fadeOut("fast");
+            });
+
+            $("#fadTog").click(function(){
+                $("#image").fadeToggle(3000);
+            });
+
+            $("#fadTo").click(function(){
+                $("#image").fadeTo(3000, 0.5, function(){
+                    alert("Fade to 50% opacity complete!");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

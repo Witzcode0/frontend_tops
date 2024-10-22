@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            background-color: #f2f2f2;
+        }
+        #title{
+            color:rgb(53, 184, 112);
+        }
+        .password-container {
+            position: relative;
+            display: inline-block;
+        }
+        #pwdfield{
+            padding: 10px;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: rgb(53, 184, 112);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <h1 id="title">Show and Hide Password</h1>
+        </div>
+        <div class="bottom">
+            <div class="password-container">
+                <input type="password" id="pwdfield" placeholder="Enter your password">
+                <button class="toggle-password" id="tp">Show</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#tp').on('click', function(e) {
+                e.preventDefault();
+                const pwdfield = $('#pwdfield');
+                const type = pwdfield.attr('type') === 'password' ? 'text' : 'password';
+                pwdfield.attr('type', type);
+                $(this).text(type === 'password' ? 'Show' : 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>
