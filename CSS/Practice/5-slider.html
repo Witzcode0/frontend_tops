@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin-top: 10vh;
+            width: 100%;
+            height: 70vh;
+            background-color: #f1f1f1;
+        }
+
+        .sliders {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            border: 1px solid #7b1cd4;
+            background-color: #d0b9e5;
+            position: relative;
+        }
+
+        .button {
+            color: #7b1cd4;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .buttons1 {
+            padding: 10px;
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+        }
+        .buttons2{
+            width: 109%;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #prev{
+            float: left;
+        }
+        #next{
+            float: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sliders">
+            <div class="buttons1">
+                <button id="arrow-left" class="button">&#x2BC7;</button>
+                <button id="arrow-right" class="button">&#x2BC8;</button>
+            </div>
+            <div class="buttons2">
+                <button id="prev" class="button">Pre</button>
+                <button id="next" class="button">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
