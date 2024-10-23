@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #7abddb;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn {
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            padding:0.7em 1.7em;
+            font-size: 18px;
+            font-weight: bolder;
+            
+        }
+        .btn1{
+
+            background-color: #ffcc00;
+ 
+           transition: all 0.6s;
+        }
+        .btn1:hover {
+            background: linear-gradient(to right, #ffcc00, #ff731f, rgb(129, 212, 16));
+            background-clip: text;
+            color: transparent;
+            border: 1px solid #af76e6;
+        }
+
+        .btn2{
+            color: #ee1a1a;
+            
+            background-color: rgb(240, 240, 240);
+            border: 1px solid #0a0a0a;
+            transition: all 0.5s;
+            box-shadow: 4px 4px 10px #706868, -4px -4px 10px #8b8080;
+
+        }
+        .btn2:hover {
+            border: 1px solid white;
+        }
+        .btn2:active{
+            box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #f0ff6a;
+        }
+        .btn3{
+            border: 2px solid #0f172a;
+            box-shadow: 2px 2px 0 0 white, 4px 4px 0 0 #0f172a;
+        }
+        .btn3:active{
+            box-shadow: 3px 3px white, 6px 6px 0 0 #0f172a;
+            transform: translate(-2px, -2px);
+        }
+        .btn4{
+            border: none;
+            outline: none;
+            position: relative;
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: .5rem;
+            box-shadow: 0 18px 40px cornflowerblue;
+            overflow: hidden;
+        }
+        .btn4::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150%;
+            height: 100%;
+            background: repeating-linear-gradient(60deg, transparent, transparent .75rem, cornflowerblue .75rem, cornflowerblue 1.5rem);
+            animation: load 1s infinite linear;
+        }
+
+        @keyframes load {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <button class="btn btn1">
+                Button-1
+            </button>
+        </div>
+        <div class="box">
+            <button class="btn btn2">
+                Button-2
+            </button>
+        </div>
+        <div class="box">
+            <button class="btn btn3">
+                Button-3
+            </button>
+        </div>
+        <div class="box">
+            <button class="btn btn4">
+                Button-4
+            </button>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
