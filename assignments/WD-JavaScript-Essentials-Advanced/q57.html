@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Subjects Marks</title>
+</head>
+<body>
+  <h1>IT Subjects Marks Entry</h1>
+  <table>
+    <tr>
+      <td>Subject 1 Marks:</td>
+      <td><input type="number" id="subject1" max="50" /></td>
+    </tr>
+    <tr>
+      <td>Subject 2 Marks:</td>
+      <td><input type="number" id="subject2" max="50" /></td>
+    </tr>
+    <tr>
+      <td>Subject 3 Marks:</td>
+      <td><input type="number" id="subject3" max="50" /></td>
+    </tr>
+    <tr>
+      <td>Subject 4 Marks:</td>
+      <td><input type="number" id="subject4" max="50" /></td>
+    </tr>
+    <tr>
+      <td>Subject 5 Marks:</td>
+      <td><input type="number" id="subject5" max="50" /></td>
+    </tr>
+    <tr>
+      <td>Subject 6 Marks:</td>
+      <td><input type="number" id="subject6" max="50" /></td>
+    </tr>
+    <tr>
+      <td>Subject 7 Marks:</td>
+      <td><input type="number" id="subject7" max="50" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button onclick="calculateMarks()">Calculate</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Total Obtained Marks:</td>
+      <td><span id="totalMarks">0</span> / 350</td>
+    </tr>
+    <tr>
+      <td>Percentage:</td>
+      <td><span id="percentage">0</span>%</td>
+    </tr>
+  </table>
+
+  <script>
+    function calculateMarks() {
+      const marks1 = parseFloat(document.getElementById("subject1").value) || 0;
+      const marks2 = parseFloat(document.getElementById("subject2").value) || 0;
+      const marks3 = parseFloat(document.getElementById("subject3").value) || 0;
+      const marks4 = parseFloat(document.getElementById("subject4").value) || 0;
+      const marks5 = parseFloat(document.getElementById("subject5").value) || 0;
+      const marks6 = parseFloat(document.getElementById("subject6").value) || 0;
+      const marks7 = parseFloat(document.getElementById("subject7").value) || 0;
+
+      const totalMarks = marks1 + marks2 + marks3 + marks4 + marks5 + marks6 + marks7;
+
+      const percentage = (totalMarks / 350) * 100;
+
+      document.getElementById("totalMarks").innerText = totalMarks;
+      document.getElementById("percentage").innerText = percentage.toFixed(2);
+    }
+  </script>
+</body>
+</html>

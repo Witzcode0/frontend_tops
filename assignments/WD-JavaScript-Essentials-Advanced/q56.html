@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Operations</title>
+</head>
+<body>
+  <h1>Math Operations</h1>
+  <table>
+    <tr>
+      <td>Enter num 1</td>
+      <td>
+        <input type="text" id="num1" />
+      </td>
+    </tr>
+    <tr>
+      <td>Enter num 2</td>
+      <td>
+        <input type="text" id="num2" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
+        <button onclick="mod()">%</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="calculate()">Calculate</button>
+      </td>
+      <td>Answer is: <span id="total">0</span></td>
+    </tr>
+  </table>
+
+  <script>
+    let result;
+    
+    function getValues() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      return { num1, num2 };
+    }
+
+    function add() {
+      const { num1, num2 } = getValues();
+      result = num1 + num2;
+    }
+
+    function sub() {
+      const { num1, num2 } = getValues();
+      result = num1 - num2;
+    }
+
+    function mul() {
+      const { num1, num2 } = getValues();
+      result = num1 * num2;
+    }
+
+    function div() {
+      const { num1, num2 } = getValues();
+      if (num2 === 0) {
+        alert("Cannot divide by zero!");
+        result = "Undefined";
+        return;
+      }
+      result = num1 / num2;
+    }
+
+    function mod() {
+      const { num1, num2 } = getValues();
+      if (num2 === 0) {
+        alert("Cannot divide by zero!");
+        result = "Undefined";
+        return;
+      }
+      result = num1 % num2;
+    }
+
+    function calculate() {
+      document.getElementById("total").innerHTML = result !== undefined ? result : "No calculation performed";
+    }
+  </script>
+</body>
+</html>
