@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Toggle</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #b474e9;
+            transition: all 0.3s ease;
+        }
+        .main-content {
+            flex: 1;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .toggle-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar"></div>
+        <div class="main-content">
+            <button class="toggle-btn">
+                <i class="fa fa-bars" style="font-size:24px;"></i>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis hic error odit corrupti magnam cumque incidunt magni illo, dicta vero? Amet hic ex consequuntur, ratione sit provident eveniet ducimus facere, vitae, ea praesentium similique deleniti consequatur tempora? Odio eveniet nobis modi repudiandae dignissimos, sed natus quod magni unde reprehenderit vitae labore voluptate voluptates placeat consequuntur adipisci eos dolores sequi non nostrum doloribus. Iure exercitationem cum nemo ipsa? Neque corporis totam esse provident deserunt, sit laboriosam numquam nobis voluptate exercitationem nulla vel, fugit eveniet ducimus amet dolorum eius aperiam aspernatur iure animi dolorem tempora eaque porro. Saepe, dolores! Distinctio, commodi ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum animi, deserunt odit fugiat reprehenderit molestias aliquid illum, velit natus accusamus ullam ex eveniet soluta id incidunt odio recusandae qui repellat pariatur eos alias. Possimus inventore commodi consequuntur facere praesentium natus suscipit error a perspiciatis nemo, obcaecati, quia quod voluptatum earum totam quasi quae! Soluta numquam doloribus, sed nulla laboriosam reiciendis a libero tempore perferendis delectus quasi ipsum. Necessitatibus nesciunt adipisci soluta ducimus tenetur fugiat enim maiores, totam natus.</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.toggle-btn').click(function() {
+                $('.sidebar').toggleClass('hidden');
+
+                if ($('.sidebar').hasClass('hidden')) {
+                    $('.sidebar').css('width', '0');
+                    $('.toggle-btn i').removeClass('fa-close').addClass('fa-bars');
+                } else {
+                    $('.sidebar').css('width', '200px');
+                    $('.toggle-btn i').removeClass('fa-bars').addClass('fa-close');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
