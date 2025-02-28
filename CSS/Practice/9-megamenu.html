@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --red: #bf0101;
+            --lightRed: #f60b3c;
+            --gold: #ff7f00;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 1117px;
+            margin: auto;
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5em;
+        }
+
+        .tpheader__logo>img {
+            height: 70px;
+        }
+
+        .tpheader__menus>ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .tpheader__menus>ul>li {
+            margin-right: 2rem;
+            list-style: none;
+        }
+
+        .tpheader__menus>ul>li>a {
+            color: var(--lightRed);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .tpheader__megamenus {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            height: auto;
+            width: 100%;
+            border: 1px solid var(--lightRed);
+            border-radius: 15px;
+            box-shadow: 2px 2px 6px var(--lightRed);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .tpheader__menus>ul>li:hover .tpheader__megamenus {
+            opacity: 1;
+            visibility: visible;
+            transition: visibility .8s ease-in-out, opacity .8s ease-in-out;
+        }
+
+        .tpheader__megamenus {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: start;
+            padding: 1em;
+        }
+
+        .tpheader__megamenu_col {
+            width: 23%;
+            margin: 1%;
+            padding: 1rem;
+        }
+
+        .tpheader__megamenu__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10PX;
+        }
+
+        .tpheader__megamenu__item__icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            font-size: xx-large;
+            color: var(--gold);
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .tpheader__megamenu__item__details h3{
+            color: var(--red);
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tpheader__megamenu__item__list>ul>li {
+            margin-bottom: 10px;
+            list-style: none;
+            text-decoration: none;
+            color: var(--lightRed);
+            transition: color 0.3s ease;
+        }
+
+        .tpheader__btn>a {
+
+            background-color: var(--red);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .tpheader__btn>a:hover {
+            background-color: var(--gold);
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="tpheader__logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Simple_Shop_logo.png" alt="">
+            </div>
+            <div class="tpheader__menus">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#">Services</a>
+                        <div class="tpheader__megamenus">
+                            <div class="tpheader__megamenu_col">
+                                <div class="tpheader__megamenu__item">
+                                    <div class="tpheader__megamenu__item__icon"><i class="fa-solid fa-laptop"></i></div>
+                                    <div class="tpheader__megamenu__item__details">
+                                        <h3>Web development</h3>
+                                    </div>
+                                </div>
+                                <div class="tpheader__megamenu__item__list">
+                                    <ul>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> AngularJS Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> ReactJS Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> NodeJS Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Django Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Vue.js Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Python Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Ruby On Rails Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Laravel Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Full-stack Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> .Net Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Java Development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tpheader__megamenu_col">
+                                <div class="tpheader__megamenu__item">
+                                    <div class="tpheader__megamenu__item__icon"><i class="fa-solid fa-mobile-retro"></i>
+                                    </div>
+                                    <div class="tpheader__megamenu__item__details">
+                                        <h3>Web development</h3>
+                                    </div>
+                                </div>
+                                <div class="tpheader__megamenu__item__list">
+                                    <ul>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Android Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> iOS Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> React Native Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Flutter Development</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Cross-Platform Development</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tpheader__megamenu_col">
+                                <div class="tpheader__megamenu__item">
+                                    <div class="tpheader__megamenu__item__icon"><i
+                                            class="fa-solid fa-list-check"></i></i>
+                                    </div>
+                                    <div class="tpheader__megamenu__item__details">
+                                        <h3>Managed Services</h3>
+                                    </div>
+                                </div>
+                                <div class="tpheader__megamenu__item__list">
+                                    <ul>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Application Management & Modernization</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Software Product Engineering</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Software outsourcing company</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> IT Consulting Services</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> IT Staff Augmentation</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tpheader__megamenu_col">
+                                <div class="tpheader__megamenu__item">
+                                    <div class="tpheader__megamenu__item__icon"><i
+                                            class="fa-solid fa-rectangle-list"></i></div>
+                                    <div class="tpheader__megamenu__item__details">
+                                        <h3>Other</h3>
+                                    </div>
+                                </div>
+                                <div class="tpheader__megamenu__item__list">
+                                    <ul>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Testing & Assurance</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> Design Service</li>
+                                        <li><i class="fa-solid fa-arrows-turn-right"></i> SaaS Development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="tpheader__btn">
+                <a href="#">Get in touch</a>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
