@@ -3,122 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flex</title>
     <style>
       :root {
-        --darkPurple: #0f0327;
-        --lightPurple1: #d2bce4;
-        --lightPurple2: #996dba;
-        --lightPurple3: #904abc;
+        --red: #bf0101;
+        --lightRed: #f60b3c;
+        --gold: #ff7f00;
       }
-
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-
       .container {
-        height: 100vh;
-        width: 100%;
-        border: 1px solid var(--darkPurple);
+        width: 1171px;
+        height: 50vh;
+        border: 1px solid;
+        margin: auto;
+
+        /* This is required to make the container a flex container. */
         display: flex;
+        /* Defines the direction in which the flex items are placed in the container. */
+        flex-direction: row;
+        flex-direction: row-reverse;
+        flex-direction: column;
+        /* flex-direction: column-reverse; */
+        /* Aligns flex items on the main axis (horizontal by default). */
+        justify-content: flex-start;
+        justify-content: center;
+        justify-content: flex-end;
+        justify-content: space-between;
         justify-content: space-around;
+        justify-content: space-evenly;
+        /* Aligns flex items on the cross axis (vertical by default). */
+        align-items: flex-start;
         align-items: center;
+        align-items: flex-end;
+        align-items:stretch;
+        align-items:normal;
+        /* Aligns the lines of flex items (useful when there are multiple lines of items). */
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: center;
+        align-content: space-between;
+        align-content: space-around;
+        align-content: space-evenly;
+        align-content: stretch;
+        /* Controls whether flex items should wrap or not. */
+        flex-wrap: nowrap;
+        flex-wrap: wrap-reverse;
         flex-wrap: wrap;
-        gap: 10px;
       }
-
+      
       .box {
-        color: var(--lightPurple3);
-        border: 1px solid var(--darkPurple);
+        border: 1px solid var(--lightRed);
+        width: 23%;
+        margin: 1%;
       }
 
-      .box-1,
-      .box-2,
-      .box-3,
-      .box-4 {
-        flex-basis: calc(25% - 20px);
-        height: 20vh;
-        padding: 20px;
-        text-align: justify;
+      .box-1{
+        flex-grow: 1;
       }
-
-      .box-5,
-      .box-6 {
-        flex-basis: calc(50% - 20px);
-
-        height: 60vh;
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        text-align: justify;
-      }
-
-      @media (max-width: 480px) {
-        .box {
-          flex-basis: 100%;
-          overflow: hidden;
-        }
-      }
-      @media (min-width: 481) and (max-width: 768px) {
-        .box {
-          flex-basis: 50%;
-          overflow: hidden;
-        }
-      }
-      @media (min-width: 768px) {
+      .box-2{
+        flex-grow: 2;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="box box-1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
-      </div>
-      <div class="box box-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
-      </div>
-      <div class="box box-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
-      </div>
-      <div class="box box-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, neque?
-      </div>
-      <div class="box box-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-        suscipit repudiandae voluptatibus iusto accusantium alias quia soluta
-        assumenda sunt, odio autem eaque perspiciatis doloremque laudantium
-        mollitia? Et eligendi ab excepturi modi, a totam vitae repudiandae
-        debitis omnis laboriosam voluptate ut. Odio soluta est cumque! Maiores
-        molestiae velit molestias. Excepturi harum doloremque quidem assumenda
-        eius quam neque tenetur? Nisi veritatis ea architecto nulla, quae non
-        tempora nemo animi quaerat corporis. Ab dolores quis harum quos, sint
-        veritatis numquam quasi, quidem, reiciendis illo quisquam! Aut modi,
-        adipisci commodi impedit quod cum? Doloremque exercitationem eligendi
-        quam consectetur officia autem quis quos placeat. Molestias,
-        consequuntur consequatur quas architecto perferendis nam quaerat, quod,
-        consectetur nisi laudantium deserunt dolore. Fugit magnam reiciendis,
-        adipisci atque omnis sit. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Corrupti, natus. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Labore delectus obcaecati, beatae iusto
-        quae accusamus quas debitis. Impedit quibusdam pariatur labore
-        recusandae voluptate repellendus numquam reprehenderit mollitia laborum.
-        At, voluptatem.
-      </div>
-      <div class="box box-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corrupti
-        voluptatibus et blanditiis optio? At, placeat laboriosam cupiditate est
-        unde nostrum veritatis odit voluptates vel quam ullam pariatur ipsa nisi
-        amet nam a. Delectus voluptate ex dignissimos, facilis distinctio
-        voluptates adipisci voluptas quibusdam accusantium necessitatibus quidem
-        ullam atque corrupti beatae porro excepturi illo architecto, modi
-        perferendis, tenetur iste consequuntur vero ab voluptatibus? Ab
-        perspiciatis necessitatibus atque exercitationem, sit recusandae beatae
-        vero non quaerat sequi dolores vitae nisi. Hic eligendi alias commodi,
-        totam explicabo, ex eveniet praesentium aut fugit sed est reprehenderit?
-        Delectus reiciendis tempore voluptatem fuga hic nisi facere sunt!
-      </div>
+      <div class="box box-1">box-1</div>
+      <div class="box box-2">box-2</div>
+      <div class="box box-3">box-3</div>
+      <div class="box box-4">box-4</div>
+      <div class="box box-5">box-5</div>
+      <div class="box box-6">box-6</div>
+      <div class="box box-7">box-7</div>
+      <div class="box box-8">box-8</div>
     </div>
   </body>
 </html>
